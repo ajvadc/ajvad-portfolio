@@ -1,0 +1,43 @@
+/* Add to your existing CSS */
+/* Remove all tooltips and popups */
+[title],
+[aria-label],
+[data-tooltip],
+[aria-describedby],
+.tooltip,
+.tooltiptext,
+[role="tooltip"],
+div[style*="position: absolute"],
+span[style*="position: absolute"],
+.skill-dots,
+[aria-hidden="true"] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+.tech-badge {
+    background: #0f62fe;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* Remove tooltip attributes */
+*[title] {
+    title: unset;
+}
+
+/* Prevent any hover effects */
+*:hover::after,
+*:hover::before,
+*:focus::after,
+*:focus::before {
+    display: none !important;
+    content: none !important;
+}

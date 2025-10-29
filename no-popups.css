@@ -1,0 +1,69 @@
+/* Remove all tooltips and black popups */
+.skill-dots,
+[aria-hidden="true"],
+[role="tooltip"],
+.tooltip,
+.popup,
+div[style*="position: fixed"],
+div[style*="position: absolute"],
+span[style*="position: fixed"],
+span[style*="position: absolute"],
+[title]:after,
+[data-tooltip]:after,
+[aria-describedby]:after,
+[data-tippy-root],
+.tippy-box,
+.tippy-content,
+.tippy-arrow,
+div[class*="tooltip"],
+div[class*="popover"],
+div[class*="popup"],
+[aria-label]:after,
+[data-content]:after {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    content: none !important;
+}
+
+/* Disable all hover and interactive behaviors */
+* {
+    pointer-events: none !important;
+    user-select: none !important;
+    cursor: default !important;
+}
+
+/* Keep links clickable */
+a, button, input, select, textarea {
+    pointer-events: auto !important;
+}
+
+/* Remove all transitions and animations */
+* {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+}
+
+/* Remove hover effects */
+*:hover,
+*:focus {
+    transform: none !important;
+    box-shadow: none !important;
+    scale: 1 !important;
+    background: inherit !important;
+}
+
+/* Specifically target tech badges */
+.tech-badge {
+    cursor: default !important;
+}
+
+/* Remove any remaining tooltips */
+[data-tippy-root],
+.tippy-box,
+.tippy-content,
+.tippy-arrow {
+    display: none !important;
+}
