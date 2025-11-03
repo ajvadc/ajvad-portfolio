@@ -245,10 +245,11 @@
                         <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/ajvad.exe?igsh=MW9hMmUzOXF5N2U2bQ==" target="_blank" rel="noopener noreferrer">Instagram Profile</a></p>
                     </div>
                 </div>
-                <form id="contact-form">
-                    <input id="name-input" type="text" placeholder="Name" required pattern="[A-Za-z ]+">
-                    <input type="email" placeholder="Email" required>
-                    <textarea placeholder="Message" required></textarea>
+                <form id="contact-form" netlify>
+                    <input type="hidden" name="form-name" value="contact">
+                    <input id="name-input" type="text" name="name" placeholder="Name" required pattern="[A-Za-z ]+">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Message" required></textarea>
                     <button type="submit">Send Message</button>
                 </form>
             </div>
