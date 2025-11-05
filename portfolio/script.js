@@ -62,6 +62,22 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// Mobile navigation toggle
+const nav = document.querySelector('nav');
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+        // Scrolling down
+        nav.classList.remove('show');
+    } else {
+        // Scrolling up
+        nav.classList.add('show');
+    }
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
+
 // Profile image click event: rotate and show "Hello!"
 document.addEventListener('DOMContentLoaded', function() {
     const profileImage = document.querySelector('.profile-image');

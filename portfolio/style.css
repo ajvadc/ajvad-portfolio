@@ -73,7 +73,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url("images/bg.png") no-repeat center center;
+    background: url("images/112.jpg") no-repeat center center;
     background-size: cover;
     position: relative;
     text-align: center;
@@ -720,7 +720,13 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     nav {
-        display: none;
+        display: block;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    nav.show {
+        transform: translateY(0);
     }
 
     .nav-content {
@@ -744,6 +750,73 @@ footer {
 
     .contact-info {
         text-align: center;
+    }
+
+    /* Reduce sizes for mobile */
+    .hero-content {
+        padding: 1rem 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .social-links a {
+        font-size: 1.5rem;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .about-text {
+        padding: 1rem;
+    }
+
+    .highlight-text {
+        font-size: 1.2rem;
+    }
+
+    .tech-badge {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .education-card {
+        padding: 1.5rem;
+    }
+
+    .certification-card {
+        padding: 1.5rem;
+    }
+
+    .contact-info {
+        padding: 1.5rem;
+    }
+
+    .contact-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .contact-info h4 {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        padding: 1.5rem 0;
     }
 }
 
