@@ -722,6 +722,10 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
     .nav-content {
         flex-direction: column;
         gap: 1rem;
