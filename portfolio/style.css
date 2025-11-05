@@ -809,8 +809,8 @@ body{
     transform: scale(1.08);
 }
 
-.hero-right h1{ font-size:2.4rem; margin:0 0 0.3rem 0; text-transform:uppercase; letter-spacing:1px; }
-.hero-right .tagline{ color:var(--muted); margin-bottom:1rem; }
+.hero-right h1{ font-size:2.4rem; margin:0 0 0.3rem 0; text-transform:uppercase; letter-spacing:1px; background: rgba(255,255,255,0.8); padding: 0.5rem; border-radius: 8px; display: inline-block; }
+.hero-right .tagline{ color:var(--muted); margin-bottom:1rem; background: rgba(255,255,255,0.8); padding: 0.3rem 0.5rem; border-radius: 8px; display: inline-block; }
 .hero-cta{ display:flex; gap:0.75rem; margin-bottom:0.9rem; }
 .btn{ padding:0.65rem 1rem; border-radius:8px; text-decoration:none; font-weight:600; }
 .btn.primary{ background:linear-gradient(90deg,var(--primary),#2563eb); color:#fff; }
