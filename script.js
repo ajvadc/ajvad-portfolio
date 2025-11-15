@@ -115,27 +115,7 @@ window.addEventListener('scroll', function() {
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
 
-// Profile image click event: rotate and show "Hello!"
-document.addEventListener('DOMContentLoaded', function() {
-    const profileImage = document.querySelector('.profile-image');
-    if (profileImage) {
-        profileImage.addEventListener('click', function() {
-            // Toggle rotation class
-            this.classList.toggle('rotate');
-
-            // Create or update the "Hello!" text overlay
-            let helloText = this.querySelector('.hello-text');
-            if (!helloText) {
-                helloText = document.createElement('div');
-                helloText.classList.add('hello-text');
-                helloText.textContent = 'Hello!';
-                this.appendChild(helloText);
-            } else {
-                helloText.remove();
-            }
-        });
-    }
-});
+// Profile image click event removed - no zoom or rotation effect
 
 // Skill-dots generator: creates 5 dots for each .tech-badge based on data-level
 document.addEventListener('DOMContentLoaded', function() {
