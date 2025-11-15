@@ -1,5 +1,5 @@
 // Form submission handling
-// Contact form submission with name validation and Netlify Forms integration
+// Contact form submission with name validation and Formspree integration
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     const nameInput = document.getElementById('name-input');
     if (nameInput) {
@@ -17,29 +17,9 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
         }
     }
 
-    e.preventDefault();
-
-    // Prepare form data for Netlify Forms
-    const formData = new FormData(this);
-
-    // Submit to Netlify Forms via AJAX
-    fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
-    })
-    .then(response => {
-        if (response.ok) {
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
-        } else {
-            alert('There was an error sending your message. Please try again.');
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('There was an error sending your message. Please try again.');
-    });
+    // Let the form submit normally to Formspree
+    // Formspree handles the submission and redirects or shows success
+    alert('Submitting your message...');
 });
 
 // Smooth scrolling for navigation links
