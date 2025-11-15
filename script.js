@@ -1,25 +1,49 @@
-// Form submission handling
-// Contact form submission with name validation and Formspree integration
+// Enhanced JavaScript for Professional Portfolio
+
+// Form submission handling with validation and Formspree integration
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     const nameInput = document.getElementById('name-input');
+    const emailInput = document.querySelector('#contact-form input[type="email"]');
+    const messageInput = document.querySelector('#contact-form textarea');
+
+    // Validate name
     if (nameInput) {
-        const value = nameInput.value.trim();
-        const valid = /^[A-Za-z ]+$/.test(value);
-        if (!valid) {
+        const nameValue = nameInput.value.trim();
+        const nameValid = /^[A-Za-z ]+$/.test(nameValue);
+        if (!nameValid) {
             e.preventDefault();
-            // Provide a helpful validation message
             nameInput.setCustomValidity('Please enter your name using letters (A–Z) and spaces only.');
-            nameInput.reportValidity && nameInput.reportValidity();
+            nameInput.reportValidity();
             nameInput.focus();
-            // clear the custom validity after a short time so the user can correct
             setTimeout(() => nameInput.setCustomValidity(''), 3000);
             return;
         }
     }
 
-    // Let the form submit normally to Formspree
-    // Formspree handles the submission and redirects or shows success
-    alert('Submitting your message...');
+    // Validate email
+    if (emailInput && !emailInput.checkValidity()) {
+        e.preventDefault();
+        emailInput.reportValidity();
+        return;
+    }
+
+    // Validate message
+    if (messageInput && messageInput.value.trim().length < 10) {
+        e.preventDefault();
+        messageInput.setCustomValidity('Please enter a message with at least 10 characters.');
+        messageInput.reportValidity();
+        setTimeout(() => messageInput.setCustomValidity(''), 3000);
+        return;
+    }
+
+    // Show loading state
+    const submitBtn = document.querySelector('#contact-form button');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    // Let Formspree handle the submission
+    // Note: Formspree will redirect to a success page or show a message
 });
 
 // Smooth scrolling for navigation links
