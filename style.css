@@ -855,7 +855,7 @@ footer p {
     }
 
     .about-text {
-        padding: 1.5rem 1rem; /* Reduced padding */
+        padding: 1.5rem; /* Symmetric padding for aligned margins */
     }
 
     .highlight-text {
