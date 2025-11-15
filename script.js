@@ -61,16 +61,19 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
         body: new URLSearchParams(formData).toString()
     })
     .then(response => {
+        console.log('Formspree response status:', response.status);
+        console.log('Formspree response ok:', response.ok);
         if (response.ok) {
             alert('Thank you for your message! I will get back to you soon.');
             this.reset();
         } else {
+            console.error('Formspree error response:', response);
             alert('There was an error sending your message. Please try again.');
         }
     })
     .catch(error => {
-        console.error('Error:', error);
-        alert('There was an error sending your message. Please try again.');
+        console.error('Network error:', error);
+        alert('There was a network error. Please check your internet connection and try again.');
     })
     .finally(() => {
         // Reset button state
