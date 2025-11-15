@@ -245,7 +245,10 @@
                         <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/ajvad.exe?igsh=MW9hMmUzOXF5N2U2bQ==" target="_blank" rel="noopener noreferrer">Instagram Profile</a></p>
                     </div>
                 </div>
-                <form id="contact-form" action="https://formspree.io/f/myzljprn" method="POST">
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="57899b7a-5aa1-4570-8e8d-3992842994e3">
+                    <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio">
+                    <input type="hidden" name="from_name" value="Portfolio Contact Form">
                     <input id="name-input" type="text" name="name" placeholder="Name" required pattern="[A-Za-z ]+">
                     <input type="email" name="email" placeholder="Email" required>
                     <textarea name="message" placeholder="Message" required></textarea>

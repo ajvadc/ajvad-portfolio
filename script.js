@@ -54,8 +54,8 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     // Prepare form data for Formspree
     const formData = new FormData(this);
 
-    // Submit to Formspree via AJAX
-    fetch('https://formspree.io/f/myzljprn', {
+    // Submit to Web3Forms via AJAX
+    fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData).toString()
