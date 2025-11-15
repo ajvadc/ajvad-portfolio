@@ -776,26 +776,26 @@ footer p {
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
-        padding-top: 4rem; /* Increased padding to prevent nav overlap */
+        padding-top: 3.5rem; /* Adjusted padding for nav height */
     }
 
     .nav-content {
-        padding: 0.6rem 0.6rem; /* Reduced padding for more space */
+        padding: 0.4rem 0.4rem; /* Minimal padding for maximum space */
         flex-wrap: nowrap;
         justify-content: flex-start; /* Left-align all items */
         align-items: center;
-        gap: 0.8rem; /* Reduced gap for more space */
+        gap: 0.5rem; /* Minimal gap between logo and links */
     }
 
     .logo a {
-        font-size: 1rem; /* Slightly smaller logo */
+        font-size: 0.9rem; /* Smaller logo to save space */
         white-space: nowrap;
         flex-shrink: 0;
     }
 
     .nav-links {
         display: flex;
-        gap: 0.5rem; /* Reduced gap between links */
+        gap: 0.3rem; /* Minimal gap between links */
         flex-wrap: nowrap;
         justify-content: flex-start; /* Left-align nav links */
         flex-shrink: 1;
@@ -804,8 +804,8 @@ footer p {
     }
 
     .nav-links a {
-        font-size: 0.65rem; /* Smaller font for all links */
-        padding: 0.3rem 0.4rem; /* Reduced padding */
+        font-size: 0.6rem; /* Very small font for maximum space */
+        padding: 0.2rem 0.3rem; /* Minimal padding */
         white-space: nowrap;
         flex-shrink: 1; /* Allow shrinking */
         min-width: 0;
