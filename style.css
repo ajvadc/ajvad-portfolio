@@ -775,8 +775,12 @@ footer p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    body {
+        padding-top: 3rem; /* Add top padding to prevent nav overlap */
+    }
+
     .nav-content {
-        padding: 0.6rem 0.8rem;
+        padding: 0.8rem 0.8rem; /* Slightly increase padding for better height */
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
