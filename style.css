@@ -866,6 +866,12 @@ footer p {
         font-size: 0.8rem; /* Smaller highlight text - decreased by 4 */
     }
 
+    /* Mobile text styling: 16px font-size and 1.5 line-height for all text except headings */
+    p, .about-description, .certification-description, .education-details, .contact-info p, .skill-list li, .achievements li {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+    }
+
     .education-card,
     .certification-card {
         padding: 1.5rem; /* Reduced card padding */
