@@ -856,6 +856,9 @@ footer p {
 
     .about-text {
         padding: 1.5rem; /* Symmetric padding for aligned margins */
+        margin: 1.5rem; /* 4-side margins */
+        border-radius: 0; /* Remove rounded corners (no lines) */
+        box-shadow: none; /* Remove shadow (no lines) */
     }
 
     .highlight-text {
