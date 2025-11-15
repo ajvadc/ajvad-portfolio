@@ -813,22 +813,23 @@ footer p {
 
     .hero-grid {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2rem; /* Reduced gap for better spacing */
         text-align: center;
         padding: 0 1rem;
     }
 
     .profile-image {
-        width: 250px;
-        height: 250px;
+        width: 200px; /* Smaller image */
+        height: 200px;
+        margin: 0 auto; /* Center the image */
     }
 
     .hero-right h1 {
-        font-size: 2.5rem;
+        font-size: 2rem; /* Smaller title */
     }
 
     .tagline {
-        font-size: 1.2rem;
+        font-size: 1rem; /* Smaller tagline */
     }
 
     .social-links {
@@ -836,19 +837,32 @@ footer p {
     }
 
     section {
-        padding: 3rem 0;
+        padding: 2rem 0; /* Reduced section padding */
     }
 
     section h2 {
-        font-size: 2rem;
+        font-size: 1.8rem; /* Smaller section headings */
     }
 
     .about-text {
-        padding: 2rem 1rem;
+        padding: 1.5rem 1rem; /* Reduced padding */
     }
 
     .highlight-text {
-        font-size: 1.4rem;
+        font-size: 1.2rem; /* Smaller highlight text */
+    }
+
+    .education-card,
+    .certification-card {
+        padding: 1.5rem; /* Reduced card padding */
+    }
+
+    .skill-category {
+        padding: 1.5rem; /* Reduced skill category padding */
+    }
+
+    .contact-info {
+        padding: 1.5rem; /* Reduced contact info padding */
     }
 
     .education-grid,
