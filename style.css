@@ -176,7 +176,7 @@ nav {
 }
 
 .profile-image:hover {
-    transform: scale(1.05) rotate(5deg);
+    transform: scale(1.05);
     box-shadow: 0 30px 80px rgba(15, 98, 254, 0.3);
 }
 
