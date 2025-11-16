@@ -50,12 +50,22 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     }
 
     // Validate message
-    if (messageInput && messageInput.value.trim().length < 10) {
-        e.preventDefault();
-        messageInput.setCustomValidity('Please enter a message with at least 10 characters.');
-        messageInput.reportValidity();
-        setTimeout(() => messageInput.setCustomValidity(''), 3000);
-        return;
+    if (messageInput) {
+        const messageValue = messageInput.value.trim();
+        if (messageValue.length < 5) {
+            e.preventDefault();
+            messageInput.setCustomValidity('Please enter a message with at least 5 characters.');
+            messageInput.reportValidity();
+            setTimeout(() => messageInput.setCustomValidity(''), 3000);
+            return;
+        }
+        if (messageValue.length > 1024) {
+            e.preventDefault();
+            messageInput.setCustomValidity('Please enter a message with no more than 1024 characters.');
+            messageInput.reportValidity();
+            setTimeout(() => messageInput.setCustomValidity(''), 3000);
+            return;
+        }
     }
 
     // Show loading state
