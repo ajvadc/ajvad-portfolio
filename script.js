@@ -4,6 +4,7 @@
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     const nameInput = document.getElementById('name-input');
     const emailInput = document.querySelector('#contact-form input[type="email"]');
+    const phoneInput = document.querySelector('#contact-form input[type="tel"]');
     const messageInput = document.querySelector('#contact-form textarea');
 
     // Validate name
@@ -30,6 +31,20 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
             emailInput.reportValidity();
             emailInput.focus();
             setTimeout(() => emailInput.setCustomValidity(''), 3000);
+            return;
+        }
+    }
+
+    // Validate phone number
+    if (phoneInput) {
+        const phoneValue = phoneInput.value.trim();
+        const phoneRegex = /^[\+]?[0-9\s\-\(\)]+$/;
+        if (!phoneRegex.test(phoneValue) || phoneValue.length < 10) {
+            e.preventDefault();
+            phoneInput.setCustomValidity('Please enter a valid phone number (at least 10 digits, numbers, spaces, dashes, parentheses, and optional +).');
+            phoneInput.reportValidity();
+            phoneInput.focus();
+            setTimeout(() => phoneInput.setCustomValidity(''), 3000);
             return;
         }
     }
