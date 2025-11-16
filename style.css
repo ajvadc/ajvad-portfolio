@@ -244,7 +244,7 @@ nav {
     width: 110%;
     height: 110%;
     object-fit: cover;
-    object-position: center 30%;
+    object-position: center 20%;
     transition: var(--transition);
 }
 
