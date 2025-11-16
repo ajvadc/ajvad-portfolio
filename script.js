@@ -150,7 +150,46 @@ window.addEventListener('scroll', function() {
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
 
-// Profile image click event removed - no zoom or rotation effect
+// Profile image double-click event for coin toss spin animation
+document.querySelector('.profile-image').addEventListener('dblclick', function() {
+    const isFlipped = this.classList.contains('flipped');
+
+    if (isFlipped) {
+        // Spin back to normal
+        this.classList.add('spin-to-normal');
+        this.classList.remove('flipped');
+        setTimeout(() => {
+            this.classList.remove('spin-to-normal');
+        }, 3500);
+    } else {
+        // Spin to flipped
+        this.classList.add('spin-to-flipped');
+        setTimeout(() => {
+            this.classList.add('flipped');
+            this.classList.remove('spin-to-flipped');
+            // Add show-text class to reveal "Hello !" after spinning completes
+            this.parentElement.classList.add('show-text');
+        }, 3500);
+    }
+});
+
+// Profile image single-click event to return to normal state
+document.querySelector('.profile-image').addEventListener('click', function() {
+    const isFlipped = this.classList.contains('flipped');
+
+    if (isFlipped) {
+        // Spin back to normal
+        this.classList.add('spin-to-normal');
+        this.classList.remove('flipped');
+        // Remove show-text class to hide "Hello !"
+        this.parentElement.classList.remove('show-text');
+        setTimeout(() => {
+            this.classList.remove('spin-to-normal');
+        }, 3500);
+    }
+});
+
+
 
 // Skill-dots generator: creates 5 dots for each .tech-badge based on data-level
 document.addEventListener('DOMContentLoaded', function() {
