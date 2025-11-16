@@ -1,10 +1,9 @@
-# TODO: Add Coin Toss Spin Animation on Double-Click
+# TODO: Update Portfolio with Achievements and Certifications
 
-- [x] Create @keyframes spinToFlipped (360deg) and spinToNormal (540deg) for 1 round
-- [x] Add .spin-to-flipped and .spin-to-normal classes to trigger animations
-- [x] Add .flipped class to maintain flipped state
-- [x] Add "Hello !" text on the back of the image with white background and black font, shown only after spinning completes
-- [x] Add double-click event listener to toggle between normal and flipped states
-- [x] Add single-click event listener to return to normal state
-- [x] Change animation duration to 3.5s for very slow, smooth-motion spinning
-- [ ] Test the animation in browser
+- [x] Add "Key Achievements" section after About in index.html
+- [x] Update navigation to include Achievements link
+- [x] Populate Key Achievements with 4 items: Deloitte Certification, Web App Development, Cybersecurity Workshop Lead, AI Course Completion
+- [x] Update Certifications section with all listed certifications
+- [x] Enhance content professionalism: rephrase About, Skills, etc.
+- [x] Test the updated portfolio in browser
+- [x] Enhance professionalism: update tagline, add SEO meta tags, improve skill descriptions

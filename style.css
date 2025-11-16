@@ -598,6 +598,65 @@ section h2::after {
     left: 0;
 }
 
+/* Achievements Section */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.achievement-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    animation: fadeInUp 1s ease-out;
+}
+
+.achievement-card:nth-child(1) { animation-delay: 0.1s; }
+.achievement-card:nth-child(2) { animation-delay: 0.2s; }
+.achievement-card:nth-child(3) { animation-delay: 0.3s; }
+.achievement-card:nth-child(4) { animation-delay: 0.4s; }
+
+.achievement-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.achievement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.achievement-header h3 {
+    color: var(--text-dark);
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.achievement-date {
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: rgba(15, 98, 254, 0.1);
+    font-size: 0.9rem;
+    border: 1px solid rgba(15, 98, 254, 0.2);
+}
+
+.achievement-description {
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
 /* Certifications Section */
 .certifications-grid {
     display: grid;
@@ -927,9 +986,9 @@ footer p {
         font-size: 0.8rem; /* Smaller highlight text - decreased by 4 */
     }
 
-    /* Mobile text styling: 16px font-size and 1.5 line-height for all text except headings */
+    /* Mobile text styling: 14px font-size and 1.5 line-height for all text except headings */
     p, .about-description, .certification-description, .education-details, .contact-info p, .skill-list li, .achievements li {
-        font-size: 16px !important;
+        font-size: 14px !important;
         line-height: 1.5 !important;
     }
 
@@ -947,7 +1006,8 @@ footer p {
     }
 
     .education-grid,
-    .certifications-grid {
+    .certifications-grid,
+    .achievements-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
