@@ -204,7 +204,6 @@ nav {
 
 .profile-image {
     position: relative;
-    backface-visibility: hidden;
     transition: transform 3.5s ease-in-out;
 }
 
