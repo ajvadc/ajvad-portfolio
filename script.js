@@ -38,10 +38,10 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     // Validate phone number
     if (phoneInput) {
         const phoneValue = phoneInput.value.trim();
-        const phoneRegex = /^[\+]?[0-9\s\-\(\)]+$/;
+        const phoneRegex = /^[\+]?[0-9\s]+$/;
         if (!phoneRegex.test(phoneValue) || phoneValue.length < 10) {
             e.preventDefault();
-            phoneInput.setCustomValidity('Please enter a valid phone number (at least 10 digits, numbers, spaces, dashes, parentheses, and optional +).');
+            phoneInput.setCustomValidity('Please enter a valid phone number (at least 10 digits, numbers, spaces, and optional +).');
             phoneInput.reportValidity();
             phoneInput.focus();
             setTimeout(() => phoneInput.setCustomValidity(''), 3000);
