@@ -897,15 +897,20 @@ footer p {
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
-        padding-top: 4rem; /* Increased padding to ensure content isn't hidden behind nav */
+        padding-top: 3rem; /* Adjusted to match nav height and remove white space */
+    }
+
+    nav {
+        height: 3rem; /* Fixed height for consistent spacing */
     }
 
     .nav-content {
-        padding: 0.3rem 0.5rem; /* Reduced padding to remove extra white space */
+        padding: 0.5rem 0.5rem; /* Symmetric padding for better alignment */
         flex-wrap: nowrap; /* Keep all items on same line */
         justify-content: space-between; /* Better spacing */
         align-items: center;
         gap: 0.1rem; /* Tighter gap */
+        height: 100%; /* Fill nav height */
     }
 
     .logo a {
@@ -921,7 +926,7 @@ footer p {
     .logo a::before {
         content: "AC"; /* Show abbreviated name on mobile */
         position: absolute;
-        top: -0.1rem; /* Move AC slightly above */
+        top: 0; /* Centered vertically */
         left: 0;
         right: 0;
         bottom: 0;
@@ -944,10 +949,15 @@ footer p {
         flex-shrink: 1;
         min-width: 0;
         justify-content: flex-end;
+        height: 100%; /* Fill nav height */
+        align-items: center; /* Vertically center links */
     }
 
     .nav-links li {
         flex-shrink: 1; /* Allow shrinking */
+        height: 100%; /* Fill nav height */
+        display: flex;
+        align-items: center; /* Vertically center each link */
     }
 
     .nav-links a {
@@ -956,6 +966,9 @@ footer p {
         white-space: nowrap;
         flex-shrink: 1; /* Allow shrinking */
         min-width: 0;
+        height: 100%; /* Fill li height */
+        display: flex;
+        align-items: center; /* Vertically center text */
     }
 
     .hero-grid {
