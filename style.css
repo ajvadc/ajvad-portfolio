@@ -914,18 +914,19 @@ footer p {
         flex-shrink: 0;
     }
 
+    .logo a {
+        font-size: 0; /* Hide the full name text on mobile */
+    }
+
     .logo a::before {
         content: "AC"; /* Show abbreviated name on mobile */
-        display: block;
+        display: inline-block;
+        font-size: 1rem; /* Restore size for AC */
         background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         text-decoration: none;
-    }
-
-    .logo a span {
-        display: none; /* Hide full name on mobile */
     }
 
     .nav-links {
