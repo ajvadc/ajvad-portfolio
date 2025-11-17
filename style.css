@@ -902,7 +902,7 @@ footer p {
 
     .nav-content {
         padding: 0.5rem 1rem; /* Increased padding for better touch targets */
-        flex-wrap: wrap;
+        flex-wrap: nowrap; /* Keep all items on same line */
         justify-content: space-between; /* Better spacing */
         align-items: center;
         gap: 0.5rem; /* Increased gap */
