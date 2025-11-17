@@ -905,7 +905,7 @@ footer p {
         flex-wrap: nowrap; /* Keep all items on same line */
         justify-content: space-between; /* Better spacing */
         align-items: center;
-        gap: 0.5rem; /* Increased gap */
+        gap: 0.2rem; /* Decreased gap */
     }
 
     .logo a {
@@ -913,6 +913,9 @@ footer p {
         position: relative;
         white-space: nowrap;
         flex-shrink: 0;
+        width: 2rem; /* Set width for AC visibility */
+        height: 1rem; /* Set height for AC visibility */
+        display: inline-block;
     }
 
     .logo a::before {
@@ -932,6 +935,20 @@ footer p {
         background-clip: text;
         text-decoration: none;
         font-weight: 700;
+    }
+
+    .nav-links {
+        display: flex; /* Restore normal flex display */
+        gap: 0.2rem; /* Decreased gap */
+        flex-wrap: nowrap; /* Keep in single line */
+        flex-shrink: 1;
+        min-width: 0;
+        justify-content: flex-end;
+        order: 2; /* Move nav-links to right */
+    }
+
+    .nav-links li:first-child {
+        order: 1; /* Move Home to right */
     }
 
     .nav-links {
