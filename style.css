@@ -914,32 +914,9 @@ footer p {
     }
 
     .logo a {
-        font-size: 0; /* Hide the full name text on mobile */
-        position: relative;
+        font-size: 0.8rem; /* Smaller font for mobile to fit */
         white-space: nowrap;
         flex-shrink: 0;
-        width: 2rem; /* Set width for AC visibility */
-        height: 1rem; /* Set height for AC visibility */
-        display: inline-block;
-    }
-
-    .logo a::before {
-        content: "AC"; /* Show abbreviated name on mobile */
-        position: absolute;
-        top: -0.2rem; /* Move AC slightly up */
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1rem; /* Restore size for AC */
-        background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-decoration: none;
-        font-weight: 700;
     }
 
     .nav-links {
