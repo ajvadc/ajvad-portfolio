@@ -915,8 +915,10 @@ footer p {
 
     .logo a {
         font-size: 0.5rem; /* Match nav links font size for alignment */
+        font-weight: 500; /* Match nav links font weight for consistent line height */
         white-space: nowrap;
         flex-shrink: 0;
+        line-height: 1; /* Ensure straight baseline alignment */
     }
 
     .nav-links {
