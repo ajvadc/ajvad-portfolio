@@ -917,7 +917,7 @@ footer p {
     .nav-links {
         display: flex; /* Restore normal flex display */
         gap: 0.5rem; /* Increased gap */
-        flex-wrap: wrap;
+        flex-wrap: nowrap; /* Keep in single line */
         flex-shrink: 1;
         min-width: 0;
         justify-content: flex-end;
