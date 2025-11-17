@@ -926,7 +926,7 @@ footer p {
     .logo a::before {
         content: "AC"; /* Show abbreviated name on mobile */
         position: absolute;
-        top: 0; /* Centered vertically */
+        top: -0.2rem; /* Move AC slightly up */
         left: 0;
         right: 0;
         bottom: 0;
