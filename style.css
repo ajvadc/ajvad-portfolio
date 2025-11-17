@@ -897,29 +897,30 @@ footer p {
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
-        padding-top: 3.2rem; /* Further adjusted padding for smaller nav height */
+        padding-top: 4rem; /* Increased padding to ensure content isn't hidden behind nav */
     }
 
     .nav-content {
-        padding: 0.3rem 0.3rem; /* Even more minimal padding */
-        flex-wrap: nowrap;
-        justify-content: flex-start; /* Left-align all items */
+        padding: 0.5rem 1rem; /* Increased padding for better touch targets */
+        flex-wrap: wrap;
+        justify-content: space-between; /* Better spacing */
         align-items: center;
-        gap: 0.2rem; /* Small gap between items */
+        gap: 0.5rem; /* Increased gap */
     }
 
     .logo a {
-        font-size: 0.8rem; /* Even smaller logo */
+        font-size: 1rem; /* Slightly larger logo for readability */
         white-space: nowrap;
         flex-shrink: 0;
     }
 
     .nav-links {
         display: flex; /* Restore normal flex display */
-        gap: 0.2rem; /* Small gap between links */
-        flex-wrap: nowrap;
+        gap: 0.5rem; /* Increased gap */
+        flex-wrap: wrap;
         flex-shrink: 1;
         min-width: 0;
+        justify-content: flex-end;
     }
 
     .nav-links li {
@@ -927,16 +928,8 @@ footer p {
     }
 
     .nav-links a {
-        font-size: 0.55rem; /* Even smaller font */
-        padding: 0.15rem 0.2rem; /* Tighter padding */
-        white-space: nowrap;
-        flex-shrink: 1; /* Allow shrinking */
-        min-width: 0;
-    }
-
-    .nav-links a {
-        font-size: 0.55rem; /* Even smaller font */
-        padding: 0.15rem 0.2rem; /* Tighter padding */
+        font-size: 0.7rem; /* Slightly larger font for readability */
+        padding: 0.2rem 0.3rem; /* Better padding */
         white-space: nowrap;
         flex-shrink: 1; /* Allow shrinking */
         min-width: 0;
