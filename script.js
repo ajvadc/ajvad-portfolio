@@ -293,4 +293,35 @@ document.addEventListener('DOMContentLoaded', function() {
             phoneInput.setSelectionRange(newPos, newPos);
         });
     }
+
+    // Email input sanitization and paste handling
+    const emailInput = document.querySelector('#contact-form input[type="email"]');
+    if (emailInput) {
+        // Prevent typing invalid characters by sanitizing on input
+        emailInput.addEventListener('input', (e) => {
+            const cursorPos = e.target.selectionStart;
+            const cleaned = e.target.value.replace(/[^A-Za-z0-9@.]/g, '');
+            if (cleaned !== e.target.value) {
+                e.target.value = cleaned;
+                // try to restore cursor position
+                e.target.setSelectionRange(cursorPos - 1, cursorPos - 1);
+            }
+            // Clear any previous custom validity when user types
+            e.target.setCustomValidity('');
+        });
+
+        // Handle paste: remove invalid chars from pasted text
+        emailInput.addEventListener('paste', (e) => {
+            e.preventDefault();
+            const paste = (e.clipboardData || window.clipboardData).getData('text');
+            const cleaned = paste.replace(/[^A-Za-z0-9@.]/g, '');
+            // Insert cleaned text at cursor position
+            const start = emailInput.selectionStart;
+            const end = emailInput.selectionEnd;
+            const value = emailInput.value;
+            emailInput.value = value.slice(0, start) + cleaned + value.slice(end);
+            const newPos = start + cleaned.length;
+            emailInput.setSelectionRange(newPos, newPos);
+        });
+    }
 });
