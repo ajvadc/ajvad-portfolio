@@ -1064,13 +1064,14 @@ footer p {
     }
 
     .education-grid,
-    .certifications-grid {
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    .certifications-grid,
+    .achievements-grid {
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Increased width for laptop screens */
         gap: 2rem;
     }
 
     .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Increased width for laptop screens */
         gap: 2rem;
     }
 
