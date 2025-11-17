@@ -914,7 +914,7 @@ footer p {
     }
 
     .logo a {
-        font-size: 0.8rem; /* Smaller font for mobile to fit */
+        font-size: 0.6rem; /* Even smaller font for mobile to fit full name */
         white-space: nowrap;
         flex-shrink: 0;
     }
