@@ -1012,27 +1012,14 @@ footer p {
         gap: 2rem;
     }
 
-    .education-card,
-    .certification-card {
-        padding: 2rem;
-    }
-
     .skills-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
-    .skill-category {
-        padding: 2rem;
-    }
-
     .contact-content {
         grid-template-columns: 1fr;
         gap: 3rem;
-    }
-
-    .contact-info {
-        padding: 2rem;
     }
 
     .prog-list {
