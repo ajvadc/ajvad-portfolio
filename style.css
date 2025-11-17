@@ -912,6 +912,7 @@ footer p {
         font-size: 1rem; /* Slightly larger logo for readability */
         white-space: nowrap;
         flex-shrink: 0;
+        content: "AC"; /* Show abbreviated name on mobile */
     }
 
     .nav-links {
