@@ -6,4 +6,4 @@
 - [x] Update Certifications section with all listed certifications
 - [x] Enhance content professionalism: rephrase About, Skills, etc.
 - [x] Test the updated portfolio in browser
-- [x] Enhance professionalism: update tagline, add SEO meta tags, improve skill descriptions
+remove my phone number from there- [x] Enhance professionalism: update tagline, add SEO meta tags, improve skill descriptions
