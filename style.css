@@ -986,23 +986,23 @@ footer p {
         font-size: 0.8rem; /* Smaller highlight text - decreased by 4 */
     }
 
-    /* Mobile text styling: 14px font-size and 1.5 line-height for all text except headings */
+    /* Mobile text styling: 16px font-size and 1.5 line-height for all text except headings */
     p, .about-description, .certification-description, .education-details, .contact-info p, .skill-list li, .achievements li {
-        font-size: 14px !important;
+        font-size: 16px !important;
         line-height: 1.5 !important;
     }
 
     .education-card,
     .certification-card {
-        padding: 1.5rem; /* Reduced card padding */
+        padding: 2rem; /* Increased card padding for better visibility */
     }
 
     .skill-category {
-        padding: 1.5rem; /* Reduced skill category padding */
+        padding: 2rem; /* Increased skill category padding */
     }
 
     .contact-info {
-        padding: 1.5rem; /* Reduced contact info padding */
+        padding: 2rem; /* Increased contact info padding */
     }
 
     .education-grid,
