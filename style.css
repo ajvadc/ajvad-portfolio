@@ -957,6 +957,12 @@ footer p {
         padding: 0 1rem;
     }
 
+    .hero-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .profile-image {
         width: 200px; /* Smaller image */
         height: 200px;
