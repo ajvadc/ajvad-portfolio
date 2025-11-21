@@ -8,7 +8,8 @@
 - Check for any other bugs in layout, animations, form, etc.
 
 ## Plan
-- [ ] Update style.css: Ensure .profile-image is properly centered in mobile layout by adding text-align: center to .hero-left in mobile media query
+- [x] Update style.css: Ensure .profile-image is properly centered in mobile layout by adding text-align: center to .hero-left in mobile media query
+- [x] Update style.css: Add text-align: justify to all text in about section (.about-text p)
 - [ ] Test image centering on mobile screens
 - [ ] Test navigation responsiveness and functionality
 - [ ] Test all sections responsiveness (About, Achievements, Education, Skills, Certifications, Contact)

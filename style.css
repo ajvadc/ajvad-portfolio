@@ -147,6 +147,9 @@ nav {
 .hero-left {
     animation: slideInLeft 1.5s ease-in-out;
     will-change: transform;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes slideInLeft {
@@ -381,6 +384,10 @@ section h2::after {
         color: var(--text-dark);
         margin-bottom: 1.5rem;
         text-align: justify; /* Align text evenly on both sides */
+    }
+
+    .about-text p {
+        text-align: justify;
     }
 
 /* Education Section */
@@ -1055,9 +1062,16 @@ footer p {
         padding: 0 2rem;
     }
 
+    .hero-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .profile-image {
         width: 300px;
         height: 300px;
+        margin: 0 auto; /* Ensure centering */
     }
 
     .hero-right h1 {
