@@ -755,16 +755,57 @@ section:target {
     margin-bottom: 10px;
 }
 
-.edu-degree {
+.edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 15px;
+}
+
+.edu-header h3 {
+    font-size: 22px;
     color: var(--primary-color);
     font-weight: 600;
-    margin-bottom: 8px;
 }
 
 .edu-period {
     color: #666;
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.edu-institution {
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.edu-location {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.edu-specialization {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.edu-description {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.edu-degree {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 8px;
 }
 
 .edu-details {
