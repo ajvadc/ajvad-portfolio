@@ -1206,6 +1206,13 @@ section:target {
     height: 80px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+    transition: var(--transition);
+}
+
+.prof-skill-card:hover .skill-icon {
+    background: rgba(255, 187, 36, 0.2);
+    transform: scale(1.15) rotate(10deg);
+    font-size: 56px;
 }
 
 .prof-skill-card h3 {
