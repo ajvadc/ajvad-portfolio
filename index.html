@@ -3,455 +3,395 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajvad Cheniyath - Computer Science Engineering Student | Cybersecurity Specialist</title>
-    <meta name="description" content="Ajvad Cheniyath — Computer Science student & cybersecurity specialist. Portfolio of secure web apps, AI projects, penetration-testing demos, and certifications. Open to internships.">
-    <meta name="keywords" content="Ajvad Cheniyath, Computer Science, Cybersecurity, Web Development, AI, Data Analysis, Portfolio">
+    <title>Ajvad Cheniyath - Full Stack Developer & Cybersecurity Specialist</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <meta name="google-site-verification" content="1DQ8tOn3d16rm7ufM1A9ucbcJp6HJxceVOGvM7sz-zg" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="nav-content">
-                <div class="logo">
-                    <a href="#home">Ajvad Cheniyath</a>
-                </div>
-                <div class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#achievements">Achievements</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">AC</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container hero-grid">
-            <div class="hero-left">
-                <div class="profile-image">
-                    <img src="images/unnamed (1).jpg" alt="Ajvad Cheniyath - Portfolio Photo" class="round-image">
-                </div>
+        <!-- Skeleton Loader -->
+        <div class="skeleton-loader" id="hero-skeleton">
+            <div class="hero-content">
+                <div class="skeleton skeleton-avatar"></div>
+                <div class="skeleton skeleton-title"></div>
+                <div class="skeleton skeleton-card-text" style="width: 50%; margin: 20px auto;"></div>
+                <div class="skeleton skeleton-card-text" style="width: 45%; margin: 10px auto 50px;"></div>
             </div>
-            <div class="hero-right">
-                <h1>Ajvad Cheniyath</h1>
-                <p class="tagline">Computer Science Engineering Student | Cybersecurity Specialist</p>
-
-                <!-- hero CTAs removed per user request -->
-
+        </div>
+        
+        <!-- Actual Content -->
+        <div class="skeleton-content" id="hero-content">
+            <div class="hero-content">
+                <div class="hero-photo-frame" style="background-image: url('images/Ajvad Cheniyath image.jpg');"></div>
+                <h1 class="hero-title">Ajvad Cheniyath</h1>
+                <p class="hero-subtitle">BTech CSE Student | Cybersecurity Specialist | MERN Stack Developer</p>
+                <p class="hero-description">Building secure, efficient, and user-friendly digital solutions</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/ajvadc" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://unstop.com/u/ajvadckr57095" id="unstop-link" target="_blank" rel="noopener noreferrer">
-                        <img src="images/unstop-logo.jpg" alt="Unstop" class="social-logo">
-                    </a>
-                    <a href="https://www.instagram.com/ajvad.exe?igsh=MW9hMmUzOXF5N2U2bQ==" id="instagram-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/in/ajvadc" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/asdcreations4166-ctrl" target="_blank" title="ASD Creations"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/ajvadc" target="_blank" title="Ajvad"><i class="fab fa-github"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>About Me</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="highlight-text">
-                        Dedicated Computer Science Engineering student specializing in Cybersecurity, with a proven track record of academic excellence and practical innovation.
+                    <p class="about-description">
+                        I'm a passionate BTech Computer Science student specializing in Cybersecurity and Full Stack Web Development. 
+                        With hands-on experience building scalable web applications and implementing security solutions, I combine technical 
+                        expertise with strategic thinking to deliver innovative digital solutions.
                     </p>
                     <p class="about-description">
-                        As a passionate emerging professional, I combine rigorous academic training with hands-on project experience to deliver comprehensive technological solutions. My expertise encompasses a diverse range of programming languages and technologies, enabling me to approach complex challenges from multiple perspectives.
+                        My expertise spans from front-end development with React.js to backend systems with Node.js and Express, database 
+                        management with MongoDB, and cybersecurity best practices. I'm currently exploring Generative AI and Machine Learning.
                     </p>
-                    <p class="tech-summary">My technical proficiency includes mastery of C, C++, Python, HTML, CSS, JavaScript, and Java, complemented by specialized knowledge in web development, cybersecurity fundamentals, and advanced data analysis techniques.</p>
-                    <p class="about-description">
-                        My academic and professional journey is distinguished by active engagement in competitive programming contests, cybersecurity simulations, and data-driven projects. Through structured coursework, industry-recognized certifications, and collaborative initiatives, I have cultivated a strong foundation in developing secure, scalable, and efficient software systems.
-                    </p>
-                    <p class="about-description">
-                        What distinguishes my approach is the integration of technical expertise with strategic thinking and interpersonal skills. I excel in collaborative environments, where I contribute innovative solutions while fostering team synergy. Currently pursuing internship opportunities in cybersecurity and software development, I am committed to applying my knowledge to create meaningful technological advancements.
-                    </p>
+                    <div class="highlight-box">
+                        <h3>Key Highlights</h3>
+                        <ul class="highlights-list">
+                            <li>500+ LinkedIn connections | 2,187 followers</li>
+                            <li>Developed A4 Aluminium Centre official website with SEO optimization</li>
+                            <li>Completed MERNify 5-day intensive workshop (ACM KARE)</li>
+                            <li>Cybersecurity certification from TheTechUnique Academy</li>
+                            <li>NSS Volunteer & Student Camp Officer (1+ years)</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="achievements" class="achievements">
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
         <div class="container">
-            <h2>Key Achievements</h2>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="achievement-header">
-                        <h3>Deloitte Certification Success</h3>
-                        <span class="achievement-date">2024</span>
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <h3>Freelance Web Developer</h3>
+                        <span class="exp-period">Dec 2025 - Present</span>
                     </div>
-                    <p class="achievement-description">
-                        Achieved an outstanding 95% score in the Deloitte Cyber Simulation Certification, demonstrating exceptional proficiency in cybersecurity practices and strategic problem-solving within a simulated professional environment.
+                    <p class="exp-company">Self-Employed</p>
+                    <p class="exp-description">
+                        Developing responsive and scalable web applications using modern technologies. 
+                        Specializing in Front-End Development and Full-Stack Development.
                     </p>
-                </div>
-
-                <div class="achievement-card">
-                    <div class="achievement-header">
-                        <h3>Web App Development</h3>
-                        <span class="achievement-date">2024</span>
+                    <div class="exp-skills">
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">MongoDB</span>
                     </div>
-                    <p class="achievement-description">
-                        Successfully developed and deployed a comprehensive web application and personal portfolio, showcasing advanced skills in full-stack development, responsive design, and user experience optimization.
-                    </p>
-                </div>
-
-                <div class="achievement-card">
-                    <div class="achievement-header">
-                        <h3>Cybersecurity Workshop Lead</h3>
-                        <span class="achievement-date">2024</span>
-                    </div>
-                    <p class="achievement-description">
-                        Led an intensive cybersecurity workshop attended by over 50 participants, delivering expert guidance on ethical hacking, network security, and vulnerability assessment techniques.
-                    </p>
-                </div>
-
-                <div class="achievement-card">
-                    <div class="achievement-header">
-                        <h3>AI Course Completion</h3>
-                        <span class="achievement-date">2024</span>
-                    </div>
-                    <p class="achievement-description">
-                        Completed an advanced AI course with over 90% active participation rate, mastering machine learning algorithms, data processing techniques, and practical applications of artificial intelligence.
-                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="education" class="experience">
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
         <div class="container">
-            <h2>Education</h2>
-            <div class="education-grid">
-                <div class="education-card current">
-                    <div class="education-header">
-                        <h3>Bachelor of Technology (B.Tech)</h3>
-                        <span class="education-date">August 2024 - Present</span>
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <!-- Skeleton Loader -->
+            <div class="skeleton-loader" id="projects-skeleton">
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn carousel-prev" disabled><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-container">
+                        <div style="padding: 30px; border-radius: 16px;">
+                            <div class="skeleton skeleton-card-header"></div>
+                            <div class="skeleton skeleton-card-text"></div>
+                            <div class="skeleton skeleton-card-text" style="width: 90%;"></div>
+                            <div class="skeleton skeleton-card-text" style="width: 70%; margin-bottom: 20px;"></div>
+                            <div class="skeleton skeleton-card-text"></div>
+                            <div class="skeleton skeleton-card-text" style="width: 60%;"></div>
+                        </div>
                     </div>
-                    <p class="institution">Kalasalingam Academy of Research and Education</p>
-                    <p class="location">Virudhunagar, Tamil Nadu</p>
-                    <div class="education-details">
-                        <h4>Computer Science Engineering with Cyber Security</h4>
-                        <ul class="achievements">
-                            <li>Specializing in cutting-edge cybersecurity technologies and advanced computer science concepts</li>
-                            <li>Engaging in industry-standard coursework and practical projects</li>
-                            <li>Active participant in Vintra Competitions, demonstrating competitive spirit</li>
-                            <li>Contributing member of technical clubs, fostering collaborative learning</li>
-                        </ul>
-                    </div>
+                    <button class="carousel-btn carousel-next" disabled><i class="fas fa-chevron-right"></i></button>
                 </div>
+            </div>
+            
+            <!-- Actual Content -->
+            <div class="skeleton-content" id="projects-content">
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn carousel-prev" onclick="slideCarousel('projects', -1)"><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-container">
+                        <div class="projects-carousel" id="projects-carousel">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>A4 Aluminium Centre - Website</h3>
+                                <span class="project-date">Dec 2025</span>
+                            </div>
+                            <p class="project-description">
+                                Developed the official website for A4 Aluminium Centre, a Kerala-based aluminium supplier. 
+                                Designed with clean layout, responsive design, and SEO optimization for better online presence.
+                            </p>
+                            <div class="project-highlights">
+                                <ul>
+                                    <li>Fully responsive design for all devices</li>
+                                    <li>SEO optimization with meta tags and Open Graph</li>
+                                    <li>Web3Forms integration for contact submissions</li>
+                                    <li>Hosted on Vercel with custom domain</li>
+                                    <li>Google Search Console integration</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">SEO</span>
+                                <span class="tech-tag">Vercel</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.a4aluminiumcentre.in" target="_blank" class="project-link">Visit Site →</a>
+                            </div>
+                        </div>
 
-                <div class="education-card">
-                    <div class="education-header">
-                        <h3>Higher Secondary Education (12th)</h3>
-                        <span class="education-date">June 2021 - March 2023</span>
-                    </div>
-                    <p class="institution">MPMHSS Chungathara</p>
-                    <p class="location">Nilambur, Kerala</p>
-                    <div class="education-details">
-                        <h4>Computer Science Stream</h4>
-                        <ul class="achievements">
-                            <li>Completed Kerala Higher Secondary curriculum with focus on Computer Science</li>
-                            <li>Developed strong foundation in programming fundamentals</li>
-                            <li>Gained practical experience in software development concepts</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="education-card">
-                    <div class="education-header">
-                        <h3>Secondary Education (10th)</h3>
-                        <span class="education-date">June 2020 - March 2021</span>
-                    </div>
-                    <p class="institution">Kerala Board of Public Examination (KBPE)</p>
-                    <p class="location">Pothukal, Nilambur, Kerala</p>
-                    <div class="education-details">
-                        <h4>Science Stream</h4>
-                        <ul class="achievements">
-                            <li>Strong foundation in core subjects: Mathematics, Physics, and Chemistry</li>
-                            <li>Developed analytical and problem-solving skills</li>
-                            <li>Built fundamental scientific concepts for higher education</li>
-                        </ul>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>Smart Fan Controller</h3>
+                                <span class="project-date">May 2025</span>
+                            </div>
+                            <p class="project-description">
+                                IoT-based embedded system project that automatically controls fan speed based on real-time 
+                                room temperature. Features real-time monitoring and LCD display integration.
+                            </p>
+                            <div class="project-highlights">
+                                <ul>
+                                    <li>Automatic fan speed control based on temperature</li>
+                                    <li>Real-time temperature monitoring</li>
+                                    <li>LCD display integration for live feedback</li>
+                                    <li>Python-Arduino communication</li>
+                                    <li>Energy-efficient operation</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">Arduino</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Embedded Systems</span>
+                                <span class="tech-tag">IoT</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <button class="carousel-btn carousel-next" onclick="slideCarousel('projects', 1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="carousel-indicators" id="projects-indicators"></div>
             </div>
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category tech-skills">
-                    <h3>Technical Skills</h3>
-
-                    <h4>Programming Languages</h4>
-                    <div class="prog-list">
-                        <button class="tech-badge" data-level="5">C <span class="skill-dots" aria-hidden="true"></span></button>
-                        <button class="tech-badge" data-level="4">C++ <span class="skill-dots" aria-hidden="true"></span></button>
-                        <button class="tech-badge" data-level="4">Python <span class="skill-dots" aria-hidden="true"></span></button>
-                        <button class="tech-badge" data-level="4.5">HTML <span class="skill-dots" aria-hidden="true"></span></button>
-                        <button class="tech-badge" data-level="4">CSS <span class="skill-dots" aria-hidden="true"></span></button>
-                        <button class="tech-badge" data-level="3">JavaScript <span class="skill-dots" aria-hidden="true"></span></button>
-                        <button class="tech-badge" data-level="3">Java <span class="skill-dots" aria-hidden="true"></span></button>
+            <h2 class="section-title">Technical Skills</h2>
+            
+            <!-- Skeleton Loader -->
+            <div class="skeleton-loader" id="skills-skeleton">
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn carousel-prev" disabled><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-container">
+                        <div style="padding: 30px; border-radius: 16px;">
+                            <div class="skeleton skeleton-card-header" style="margin-bottom: 20px;"></div>
+                            <div class="skeleton skeleton-card-text"></div>
+                            <div class="skeleton skeleton-card-text"></div>
+                            <div class="skeleton skeleton-card-text" style="width: 70%;"></div>
+                        </div>
                     </div>
-
-                    <h4>Web Development</h4>
-                    <ul class="skill-list">
-                        <li>HTML — Semantic markup, responsive design, accessibility standards</li>
-                        <li>CSS — Advanced styling, animations, cross-browser compatibility</li>
-                        <li>JavaScript — DOM manipulation, event handling, asynchronous programming</li>
-                        <li>MERN Stack — MongoDB, Express.js, React, Node.js full-stack development</li>
-                    </ul>
-
-                    <h4>Cybersecurity</h4>
-                    <ul class="skill-list">
-                        <li>Ethical Hacking — Penetration testing, vulnerability scanning, security assessment</li>
-                        <li>Network Security — Firewall configuration, intrusion detection, secure protocols</li>
-                        <li>Vulnerability Assessment — Risk analysis, threat modeling, security auditing</li>
-                        <li>Cybersecurity Awareness — Digital hygiene, threat identification, incident response</li>
-                    </ul>
-
-                    <h4>Data Analysis & AI</h4>
-                    <ul class="skill-list">
-                        <li>Data Analytics — Cleaning, visualization, statistical analysis, predictive modeling</li>
-                        <li>Machine Learning — Algorithms, model training, data processing techniques</li>
-                        <li>Generative AI — Model development, deployment, ethical AI practices</li>
-                        <li>Cloud Solutions — AWS architecture, scalable infrastructure design</li>
-                    </ul>
-
-                    <h4>Other Technical Strengths</h4>
-                    <ul class="skill-list">
-                        <li>Debugging & Problem Solving — Systematic issue resolution, code optimization</li>
-                        <li>Simulation Tools — Professional job simulations, scenario-based learning</li>
-                        <li>Project Management — Agile methodologies, collaborative development</li>
-                        <li>Technical Communication — Documentation, presentations, stakeholder engagement</li>
-                    </ul>
+                    <button class="carousel-btn carousel-next" disabled><i class="fas fa-chevron-right"></i></button>
                 </div>
+            </div>
+            
+            <!-- Actual Content -->
+            <div class="skeleton-content" id="skills-content">
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn carousel-prev" onclick="slideCarousel('skills', -1)"><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-container">
+                        <div class="skills-carousel" id="skills-carousel">
+                            <div class="skill-category">
+                                <h3>Frontend Development</h3>
+                                <div class="skills-list">
+                                    <span class="skill-item">React.js</span>
+                                    <span class="skill-item">JavaScript</span>
+                                    <span class="skill-item">HTML5</span>
+                                    <span class="skill-item">CSS3</span>
+                                    <span class="skill-item">Bootstrap</span>
+                                </div>
+                            </div>
 
-                <div class="skill-category soft-skills">
-                    <h3>Professional Skills</h3>
-                    <ul class="skill-list soft">
-                        <li><strong>Communication:</strong> Articulate verbal and written communication for technical and business audiences</li>
-                        <li><strong>Team Collaboration:</strong> Proven experience in cross-functional teams and technical clubs</li>
-                        <li><strong>Project Management:</strong> Efficient time management balancing academic, certification, and competitive commitments</li>
-                        <li><strong>Analytical Thinking:</strong> Systematic problem-solving approach to complex technical challenges</li>
-                        <li><strong>Continuous Learning:</strong> Proactive adaptation to emerging technologies and industry trends</li>
-                        <li><strong>Leadership & Mentorship:</strong> Workshop facilitation and community engagement initiatives</li>
-                        <li><strong>Technical Presentation:</strong> Confident delivery of technical concepts to diverse audiences</li>
-                    </ul>
+                            <div class="skill-category">
+                                <h3>Backend Development</h3>
+                                <div class="skills-list">
+                                    <span class="skill-item">Node.js</span>
+                                    <span class="skill-item">Express.js</span>
+                                    <span class="skill-item">MongoDB</span>
+                                    <span class="skill-item">RESTful APIs</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-category">
+                                <h3>Cybersecurity</h3>
+                                <div class="skills-list">
+                                    <span class="skill-item">Vulnerability Assessment</span>
+                                    <span class="skill-item">Network Security</span>
+                                    <span class="skill-item">Ethical Hacking</span>
+                                    <span class="skill-item">Digital Forensics</span>
+                                    <span class="skill-item">Anomaly Detection</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-category">
+                                <h3>Other Technologies</h3>
+                                <div class="skills-list">
+                                    <span class="skill-item">Python</span>
+                                    <span class="skill-item">Java</span>
+                                    <span class="skill-item">C/C++</span>
+                                    <span class="skill-item">Git & GitHub</span>
+                                    <span class="skill-item">Android Development</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-next" onclick="slideCarousel('skills', 1)"><i class="fas fa-chevron-right"></i></button>
                 </div>
+            </div>
+            <div class="carousel-indicators" id="skills-indicators"></div>
             </div>
         </div>
     </section>
 
+    <!-- Certifications Section -->
     <section id="certifications" class="certifications">
         <div class="container">
-            <h2>Certifications</h2>
-            <div class="certifications-grid">
-                <div class="certification-card">
-                    <div class="certification-header">
-                        <h3>A 5-day intensive workshop on MERN full Stack Web Development</h3>
-                        <span class="certification-date">ACM - Student Chapter, KARE</span>
+            <h2 class="section-title">Certifications & Achievements</h2>
+            
+            <!-- Skeleton Loader -->
+            <div class="skeleton-loader" id="certifications-skeleton">
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn carousel-prev" disabled><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-container">
+                        <div style="padding: 30px; border-radius: 16px;">
+                            <div class="skeleton skeleton-card-header" style="margin-bottom: 15px;"></div>
+                            <div class="skeleton skeleton-card-text"></div>
+                            <div class="skeleton skeleton-card-text"></div>
+                            <div class="skeleton skeleton-card-text" style="width: 80%;"></div>
+                        </div>
                     </div>
-                    <p class="certification-description">
-                        Completed an intensive 5-day workshop on MERN stack development, mastering MongoDB, Express.js, React, and Node.js for full-stack web application development.
-                    </p>
-                    <a href="https://drive.google.com/file/d/1yDNQgtaggdiV7IiZ1a9lB8RWsFyQHchZ/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="certification-link">View Certificate</a>
+                    <button class="carousel-btn carousel-next" disabled><i class="fas fa-chevron-right"></i></button>
                 </div>
-
-                <div class="certification-card">
-                    <div class="certification-header">
-                        <h3>Certificate of Appreciation - Cyber Security (2 Hours Workshop)</h3>
-                        <span class="certification-date">TheTechUnique Academy</span>
+            </div>
+            
+            <!-- Actual Content -->
+            <div class="skeleton-content" id="certifications-content">
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn carousel-prev" onclick="slideCarousel('certifications', -1)"><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-container">
+                    <div class="certifications-carousel" id="certifications-carousel">
+                        <div class="cert-card">
+                            <h3>MERNify Workshop Certificate</h3>
+                            <p class="cert-issuer">ACM - Student Chapter, KARE</p>
+                            <p class="cert-date">Nov 2025</p>
+                            <p class="cert-description">5-day intensive workshop on MERN full Stack Web Development</p>
+                        </div>
+                        <div class="cert-card">
+                            <h3>Cybersecurity Workshop Certificate</h3>
+                            <p class="cert-issuer">TheTechUnique Academy</p>
+                            <p class="cert-date">May 2025</p>
+                            <p class="cert-description">Comprehensive cybersecurity training with hands-on experience</p>
+                        </div>
+                        <div class="cert-card">
+                            <h3>Introduction to Generative AI</h3>
+                            <p class="cert-issuer">Microsoft & Google Cloud</p>
+                            <p class="cert-date">Recent</p>
+                            <p class="cert-description">Mastering Generative AI, LLMs, and Prompt Engineering</p>
+                        </div>
                     </div>
-                    <p class="certification-description">
-                        Recognized for excellence in a 2-hour cybersecurity workshop, demonstrating proficiency in ethical hacking, network security, and vulnerability assessment fundamentals.
-                    </p>
-                    <a href="https://drive.google.com/file/d/1v_E8mNvZ7vURCalUUcReTCDWpq4pPfyy/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="certification-link">View Certificate</a>
                 </div>
-
-                <div class="certification-card">
-                    <div class="certification-header">
-                        <h3>HP certified - Introduction to Cybersecurity Awareness</h3>
-                        <span class="certification-date">HP LIFE</span>
-                    </div>
-                    <p class="certification-description">
-                        Certified in cybersecurity awareness fundamentals, covering essential concepts in digital security, threat identification, and protective measures.
-                    </p>
-                    <a href="https://www.life-global.org/certificate/ceb1f08a-be22-4e7c-b31e-2d328f89e4e6" target="_blank" rel="noopener noreferrer" class="certification-link">View Certificate</a>
-                </div>
-
-                <div class="certification-card">
-                    <div class="certification-header">
-                        <h3>HP certified Business Communications</h3>
-                        <span class="certification-date">HP LIFE</span>
-                    </div>
-                    <p class="certification-description">
-                        Certified in professional business communication skills, including effective presentation, email etiquette, and interpersonal communication in corporate environments.
-                    </p>
-                    <a href="https://www.life-global.org/certificate/50536c48-6a6e-49e5-b8bc-9fe30514bde4" target="_blank" rel="noopener noreferrer" class="certification-link">View Certificate</a>
-                </div>
-
-                <div class="certification-card">
-                    <div class="certification-header">
-                        <h3>AWS APAC - Solutions Architecture Job Simulation</h3>
-                        <span class="certification-date">Forage</span>
-                    </div>
-                    <p class="certification-description">
-                        Simulated real-world AWS solutions architecture scenarios, gaining hands-on experience in designing scalable, secure cloud infrastructure solutions.
-                    </p>
-                    <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_xoGuE8bwXWY2WPn2s_1745152993365_completion_certificate.pdf" target="_blank" rel="noopener noreferrer" class="certification-link">View Certificate</a>
-                </div>
-
-                <div class="certification-card">
-                    <div class="certification-header">
-                        <h3>Career Essentials in Data Analysis by Microsoft and LinkedIn</h3>
-                        <span class="certification-date">Microsoft</span>
-                    </div>
-                    <p class="certification-description">
-                        Mastered essential data analysis skills through Microsoft's comprehensive program, including data interpretation, visualization, and analytical thinking.
-                    </p>
-                    <a href="https://drive.google.com/file/d/14OsMfHYSZ0QAH7z90qIx61r98v6EltuU/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="certification-link">View Certificate</a>
-                </div>
-
-                <div class="certification-card">
-                    <div class="certification-header">
-                        <h3>Deloitte Australia - Cyber Job Simulation</h3>
-                        <span class="certification-date">Forage</span>
-                    </div>
-                    <p class="certification-description">
-                        Participated in Deloitte's cyber job simulation, achieving a 95% score and demonstrating advanced cybersecurity skills in threat analysis and incident response.
-                    </p>
-                    <a href="https://drive.google.com/file/d/14OsMfHYSZ0QAH7z90qIx61r98v6EltuU/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="certification-link">View Certificate</a>
-                </div>
-
-                <div class="certification-card">
-                    <div class="certification-header">
-                        <h3>Introduction to Artificial Intelligence</h3>
-                        <span class="certification-date">LinkedIn</span>
-                    </div>
-                    <p class="certification-description">
-                        Gained foundational knowledge in artificial intelligence concepts, including machine learning algorithms, neural networks, and AI applications in various industries.
-                    </p>
-                    <a href="https://www.linkedin.com/learning/certificates/2116ed2e828227712ffdd57b49e05e525311503c160b1f4eef8e99c8e438fca3" target="_blank" rel="noopener noreferrer" class="certification-link">View Certificate</a>
-                </div>
-
-                <div class="certification-card">
-                    <div class="certification-header">
-                        <h3>Introduction to Career Skills in Data Analytics</h3>
-                        <span class="certification-date">LinkedIn</span>
-                    </div>
-                    <p class="certification-description">
-                        Developed essential career skills in data analytics, covering data interpretation, statistical analysis, and professional communication of insights.
-                    </p>
-                    <a href="https://www.linkedin.com/learning/certificates/5bd84afe4b9aeb452aa1e60ddcf68f51430b877dc83aae101105375840a20a61?trk=share_certificate" target="_blank" rel="noopener noreferrer" class="certification-link">View Certificate</a>
-                </div>
-
-                <div class="certification-card">
-                    <div class="certification-header">
-                        <h3>Introduction to Generative AI</h3>
-                        <span class="certification-date">Google Cloud Skills Boost</span>
-                    </div>
-                    <p class="certification-description">
-                        Explored generative AI technologies through Google Cloud, understanding AI model development, deployment, and ethical considerations in AI applications.
-                    </p>
-                    <a href="https://www.cloudskillsboost.google/course_templates/536" target="_blank" rel="noopener noreferrer" class="certification-link">View Certificate</a>
-                </div>
-
-                <div class="certification-card">
-                    <div class="certification-header">
-                        <h3>Introduction to generative AI</h3>
-                        <span class="certification-date">Microsoft</span>
-                    </div>
-                    <p class="certification-description">
-                        Acquired comprehensive knowledge of generative AI through Microsoft's program, including model training, fine-tuning, and responsible AI development practices.
-                    </p>
-                    <a href="https://learn.microsoft.com/api/achievements/share/en-us/AjvadCheniyath-2780/URF7H723?sharingId=E5B746502290D195" target="_blank" rel="noopener noreferrer" class="certification-link">View Certificate</a>
-                </div>
-
-                <div class="certification-card">
-                    <div class="certification-header">
-                        <h3>Learning Data Analytics: 1 Foundations</h3>
-                        <span class="certification-date">LinkedIn</span>
-                    </div>
-                    <p class="certification-description">
-                        Built strong foundations in data analytics, covering data collection, cleaning, statistical analysis, and basic visualization techniques.
-                    </p>
-                    <a href="https://www.linkedin.com/learning/certificates/20f7a63deb0e1ea3cbe88106a3ce131f84e666809fa7a43a68a5ebd109b66f74?trk=share_certificate" target="_blank" rel="noopener noreferrer" class="certification-link">View Certificate</a>
-                </div>
-
-                <div class="certification-card">
-                    <div class="certification-header">
-                        <h3>YOUTEX Future Leaders 2023 – Certificate of Appreciation</h3>
-                        <span class="certification-date">Youtex</span>
-                    </div>
-                    <p class="certification-description">
-                        Recognized as a future leader in technology, demonstrating potential in innovation, leadership, and contribution to the tech community.
-                    </p>
-                    <a href="https://drive.google.com/file/d/1CpDBBgW71h5e4QujochBWH0xs-iC6TmL/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="certification-link">View Certificate</a>
-                </div>
-
-                <div class="certification-card">
-                    <div class="certification-header">
-                        <h3>Learning Data Analytics Part 2: Extending and Applying Core Knowledge</h3>
-                        <span class="certification-date">LinkedIn</span>
-                    </div>
-                    <p class="certification-description">
-                        Advanced data analytics skills, focusing on complex data manipulation, advanced visualization, predictive modeling, and real-world application of analytical techniques.
-                    </p>
-                    <a href="https://www.linkedin.com/learning/certificates/d8022c7323163c75b281a2826da61c0fee2a3282c58d4e24fda6328649d1b6ed?trk=share_certificate" target="_blank" rel="noopener noreferrer" class="certification-link">View Certificate</a>
-                </div>
+                <button class="carousel-btn carousel-next" onclick="slideCarousel('certifications', 1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="carousel-indicators" id="certifications-indicators"></div>
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Contact Me</h2>
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="contact-intro">I'm open to internships, full-time roles, and exciting freelance projects. Let's build something amazing together!</p>
+            
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Let's Connect!</h3>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:ajvadyavd.4166@gmail.com">ajvadyavd.4166@gmail.com</a></p>
-                    <p><i class="fas fa-map-marker-alt"></i> Nilambur, Malappuram, Kerala</p>
-                    <div class="contact-social">
-                        <h4>Professional Profiles:</h4>
-                        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ajvadc" target="_blank">LinkedIn Profile</a></p>
-                        <p><i class="fas fa-trophy"></i> <a href="https://unstop.com/u/ajvadckr57095" target="_blank" rel="noopener noreferrer">Unstop Profile</a></p>
-                        <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/ajvad.exe?igsh=MW9hMmUzOXF5N2U2bQ==" target="_blank" rel="noopener noreferrer">Instagram Profile</a></p>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Nilambur, Kerala, India</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:ajvadyavd.4166@gmail.com">ajvadyavd.4166@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Connect</h4>
+                            <p><a href="https://www.linkedin.com/in/ajvadc" target="_blank">LinkedIn Profile</a></p>
+                        </div>
                     </div>
                 </div>
-                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="57899b7a-5aa1-4570-8e8d-3992842994e3">
-                    <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio">
-                    <input type="hidden" name="from_name" value="Portfolio Contact Form">
-                <input id="name-input" type="text" name="name" placeholder="Name" required pattern="[A-Za-z ]+">
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="tel" name="phone" placeholder="Phone Number" required pattern="[\+]?[0-9]+">
-                <textarea name="message" placeholder="Message" required minlength="5" maxlength="1024"></textarea>
-                    <!-- hCaptcha integration -->
-                    <div class="h-captcha" data-captcha="true"></div>
-                    <button type="submit">Send Message</button>
-                </form>
+
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/ajvadc" target="_blank" class="contact-btn">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com" target="_blank" class="contact-btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Ajvad Cheniyath. All rights reserved.</p>
+            <p>&copy; 2026 Ajvad Cheniyath. All rights reserved. | Crafted with passion and code</p>
+            <div class="footer-links">
+                <a href="#home">Top</a>
+                <a href="https://www.linkedin.com/in/ajvadc" target="_blank">LinkedIn</a>
+            </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    <!-- Web3Forms hCaptcha script -->
-    <script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>

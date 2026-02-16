@@ -1,327 +1,298 @@
-// Enhanced JavaScript for Professional Portfolio
+// ============================================
+// Ajvad Cheniyath - Portfolio JavaScript
+// ============================================
 
-// Form submission handling with validation and Formspree integration
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    const nameInput = document.getElementById('name-input');
-    const emailInput = document.querySelector('#contact-form input[type="email"]');
-    const phoneInput = document.querySelector('#contact-form input[type="tel"]');
-    const messageInput = document.querySelector('#contact-form textarea');
-
-    // Validate name
-    if (nameInput) {
-        const nameValue = nameInput.value.trim();
-        const nameValid = /^[A-Za-z ]+$/.test(nameValue);
-        if (!nameValid) {
-            e.preventDefault();
-            nameInput.setCustomValidity('Please enter your name using letters (A–Z) and spaces only.');
-            nameInput.reportValidity();
-            nameInput.focus();
-            setTimeout(() => nameInput.setCustomValidity(''), 3000);
-            return;
-        }
-    }
-
-    // Validate email with custom regex for better validation
-    if (emailInput) {
-        const emailValue = emailInput.value.trim();
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(emailValue)) {
-            e.preventDefault();
-            emailInput.setCustomValidity('Please enter a valid email address (e.g., user@example.com)');
-            emailInput.reportValidity();
-            emailInput.focus();
-            setTimeout(() => emailInput.setCustomValidity(''), 3000);
-            return;
-        }
-    }
-
-    // Validate phone number
-    if (phoneInput) {
-        const phoneValue = phoneInput.value.trim();
-        const phoneRegex = /^[\+]?[0-9]+$/;
-        if (!phoneRegex.test(phoneValue) || phoneValue.length < 10) {
-            e.preventDefault();
-            phoneInput.setCustomValidity('Please enter a valid phone number (at least 10 digits, numbers, and optional +).');
-            phoneInput.reportValidity();
-            phoneInput.focus();
-            setTimeout(() => phoneInput.setCustomValidity(''), 3000);
-            return;
-        }
-    }
-
-    // Validate message
-    if (messageInput) {
-        const messageValue = messageInput.value.trim();
-        if (messageValue.length < 5) {
-            e.preventDefault();
-            messageInput.setCustomValidity('Please enter a message with at least 5 characters.');
-            messageInput.reportValidity();
-            setTimeout(() => messageInput.setCustomValidity(''), 3000);
-            return;
-        }
-        if (messageValue.length > 1024) {
-            e.preventDefault();
-            messageInput.setCustomValidity('Please enter a message with no more than 1024 characters.');
-            messageInput.reportValidity();
-            setTimeout(() => messageInput.setCustomValidity(''), 3000);
-            return;
-        }
-    }
-
-    // Show loading state
-    const submitBtn = document.querySelector('#contact-form button');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Sending...';
-    submitBtn.disabled = true;
-
-    e.preventDefault();
-
-    // Check if hCaptcha is completed
-    const hCaptcha = this.querySelector('textarea[name=h-captcha-response]').value;
-    if (!hCaptcha) {
-        alert("Please fill out captcha field");
-        return;
-    }
-
-    // Prepare form data for Web3Forms
-    const formData = new FormData(this);
-
-    // Submit to Web3Forms via AJAX
-    fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
-    })
-    .then(response => {
-        console.log('Formspree response status:', response.status);
-        console.log('Formspree response ok:', response.ok);
-        if (response.ok) {
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
-        } else {
-            console.error('Formspree error response:', response);
-            alert('Form submission failed. Please check your Formspree form is active and try again.');
-        }
-    })
-    .catch(error => {
-        console.error('Network error:', error);
-        alert('Network error occurred. Please check your internet connection and try again.');
-    })
-    .finally(() => {
-        // Reset button state
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    });
-});
-
-// Smooth scrolling for navigation links
+// ============ SMOOTH SCROLL BEHAVIOR ============
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-// Navigation background change on scroll
-window.addEventListener('scroll', function() {
-    const nav = document.querySelector('nav');
-    if (window.scrollY > 50) {
-        nav.style.background = 'rgba(255, 255, 255, 0.98)';
-    } else {
-        nav.style.background = 'rgba(255, 255, 255, 0.95)';
-    }
-});
-
-// Mobile navigation toggle
-const nav = document.querySelector('nav');
-let lastScrollTop = 0;
-
-window.addEventListener('scroll', function() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop) {
-        // Scrolling down
-        nav.classList.remove('show');
-    } else {
-        // Scrolling up
-        nav.classList.add('show');
-    }
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-});
-
-// Profile image double-click event for coin toss spin animation
-document.querySelector('.profile-image').addEventListener('dblclick', function() {
-    const isFlipped = this.classList.contains('flipped');
-
-    if (isFlipped) {
-        // Spin back to normal
-        this.classList.add('spin-to-normal');
-        this.classList.remove('flipped');
-        setTimeout(() => {
-            this.classList.remove('spin-to-normal');
-        }, 3500);
-    } else {
-        // Spin to flipped
-        this.classList.add('spin-to-flipped');
-        setTimeout(() => {
-            this.classList.add('flipped');
-            this.classList.remove('spin-to-flipped');
-            // Add show-text class to reveal "Hello !" after spinning completes
-            this.parentElement.classList.add('show-text');
-        }, 3500);
-    }
-});
-
-// Profile image single-click event to return to normal state
-document.querySelector('.profile-image').addEventListener('click', function() {
-    const isFlipped = this.classList.contains('flipped');
-
-    if (isFlipped) {
-        // Spin back to normal
-        this.classList.add('spin-to-normal');
-        this.classList.remove('flipped');
-        // Remove show-text class to hide "Hello !"
-        this.parentElement.classList.remove('show-text');
-        setTimeout(() => {
-            this.classList.remove('spin-to-normal');
-        }, 3500);
-    }
-});
-
-
-
-// Skill-dots generator: creates 5 dots for each .tech-badge based on data-level
-document.addEventListener('DOMContentLoaded', function() {
-    const badges = document.querySelectorAll('.tech-badge');
-    badges.forEach(badge => {
-        const levelAttr = badge.getAttribute('data-level') || '0';
-        const level = parseFloat(levelAttr);
-        const dotsContainer = badge.querySelector('.skill-dots');
-        if (!dotsContainer) return;
-
-        // Clear any existing
-        dotsContainer.innerHTML = '';
-
-        for (let i = 1; i <= 5; i++) {
-            const dot = document.createElement('span');
-            dot.classList.add('dot');
-
-            const diff = level - (i - 1);
-            if (diff >= 1) {
-                dot.classList.add('filled');
-            } else if (diff >= 0.5) {
-                dot.classList.add('half');
-            }
-
-            dot.setAttribute('aria-hidden', 'true');
-            dotsContainer.appendChild(dot);
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         }
-
-        // For accessibility, expose current rating on focus via aria-describedby
-        const ratingText = `${levelAttr} out of 5`;
-        badge.setAttribute('aria-describedby', 'rating-' + badge.textContent.trim());
-        const sr = document.createElement('span');
-        sr.id = 'rating-' + badge.textContent.trim();
-        sr.style.position = 'absolute';
-        sr.style.left = '-9999px';
-        sr.style.width = '1px';
-        sr.style.height = '1px';
-        sr.style.overflow = 'hidden';
-        sr.textContent = ratingText;
-        badge.appendChild(sr);
     });
+});
 
-    // Name input sanitization and paste handling
-    const nameInput = document.getElementById('name-input');
-    if (nameInput) {
-        // Prevent typing invalid characters by sanitizing on input
-        nameInput.addEventListener('input', (e) => {
-            const cursorPos = e.target.selectionStart;
-            const cleaned = e.target.value.replace(/[^A-Za-z ]+/g, '');
-            if (cleaned !== e.target.value) {
-                e.target.value = cleaned;
-                // try to restore cursor position
-                e.target.setSelectionRange(cursorPos - 1, cursorPos - 1);
-            }
-            // Clear any previous custom validity when user types
-            e.target.setCustomValidity('');
-        });
+// ============ SCROLL ANIMATIONS ============
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
 
-        // Handle paste: remove invalid chars from pasted text
-        nameInput.addEventListener('paste', (e) => {
-            e.preventDefault();
-            const paste = (e.clipboardData || window.clipboardData).getData('text');
-            const cleaned = paste.replace(/[^A-Za-z ]+/g, '');
-            // Insert cleaned text at cursor position
-            const start = nameInput.selectionStart;
-            const end = nameInput.selectionEnd;
-            const value = nameInput.value;
-            nameInput.value = value.slice(0, start) + cleaned + value.slice(end);
-            const newPos = start + cleaned.length;
-            nameInput.setSelectionRange(newPos, newPos);
-        });
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.animation = `fadeIn 0.8s ease-out forwards`;
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Observe all sections
+document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+});
+
+// ============ NAVBAR SCROLL EFFECT ============
+let lastScrollTop = 0;
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Add shadow on scroll
+    if (scrollTop > 10) {
+        navbar.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.2)';
+    } else {
+        navbar.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.15)';
     }
+    
+    lastScrollTop = scrollTop;
+});
 
-    // Phone input sanitization and paste handling
-    const phoneInput = document.querySelector('#contact-form input[type="tel"]');
-    if (phoneInput) {
-        // Prevent typing invalid characters by sanitizing on input
-        phoneInput.addEventListener('input', (e) => {
-            const cursorPos = e.target.selectionStart;
-            const cleaned = e.target.value.replace(/[^\+0-9]/g, '');
-            if (cleaned !== e.target.value) {
-                e.target.value = cleaned;
-                // try to restore cursor position
-                e.target.setSelectionRange(cursorPos - 1, cursorPos - 1);
-            }
-            // Clear any previous custom validity when user types
-            e.target.setCustomValidity('');
-        });
+// ============ ACTIVE NAV LINK ============
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('section');
 
-        // Handle paste: remove invalid chars from pasted text
-        phoneInput.addEventListener('paste', (e) => {
-            e.preventDefault();
-            const paste = (e.clipboardData || window.clipboardData).getData('text');
-            const cleaned = paste.replace(/[^\+0-9]/g, '');
-            // Insert cleaned text at cursor position
-            const start = phoneInput.selectionStart;
-            const end = phoneInput.selectionEnd;
-            const value = phoneInput.value;
-            phoneInput.value = value.slice(0, start) + cleaned + value.slice(end);
-            const newPos = start + cleaned.length;
-            phoneInput.setSelectionRange(newPos, newPos);
-        });
+window.addEventListener('scroll', () => {
+    let current = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (pageYOffset >= sectionTop - 200) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    navLinks.forEach(link => {
+        link.style.color = '';
+        if (link.getAttribute('href').slice(1) === current) {
+            link.style.color = 'var(--primary-color)';
+        }
+    });
+});
+
+// ============ CARD HOVER EFFECTS ============
+const cards = document.querySelectorAll('.project-card, .education-card, .cert-card, .experience-card');
+
+cards.forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transition = 'all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+    });
+});
+
+// ============ SKILL TAGS ANIMATION ============
+const skillTags = document.querySelectorAll('.skill-tag, .tech-tag, .skill-item');
+
+skillTags.forEach((tag, index) => {
+    tag.style.animation = `fadeIn 0.6s ease-out ${index * 0.1}s both`;
+    
+    tag.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-3px) scale(1.1)';
+    });
+    
+    tag.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+    });
+});
+
+// ============ BUTTON RIPPLE EFFECT ============
+const buttons = document.querySelectorAll('.btn, .contact-btn, .project-link');
+
+buttons.forEach(button => {
+    button.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.classList.add('ripple');
+    });
+});
+
+// ============ COUNTER ANIMATION ============
+function animateCounter(element, target, duration = 2000) {
+    let current = 0;
+    const increment = target / (duration / 16);
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.textContent = target;
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current);
+        }
+    }, 16);
+}
+
+// ============ PAGE LOAD ANIMATION ============
+window.addEventListener('load', () => {
+    // Animate hero content
+    const heroTitle = document.querySelector('.hero-title');
+    const heroSubtitle = document.querySelector('.hero-subtitle');
+    const heroDescription = document.querySelector('.hero-description');
+    const heroButtons = document.querySelector('.hero-buttons');
+    
+    if (heroTitle) {
+        heroTitle.style.animation = 'slideInLeft 0.8s ease-out 0.3s both';
     }
-
-    // Email input sanitization and paste handling
-    const emailInput = document.querySelector('#contact-form input[type="email"]');
-    if (emailInput) {
-        // Prevent typing invalid characters by sanitizing on input
-        emailInput.addEventListener('input', (e) => {
-            const cursorPos = e.target.selectionStart;
-            const cleaned = e.target.value.replace(/[^A-Za-z0-9@.]/g, '');
-            if (cleaned !== e.target.value) {
-                e.target.value = cleaned;
-                // try to restore cursor position
-                e.target.setSelectionRange(cursorPos - 1, cursorPos - 1);
-            }
-            // Clear any previous custom validity when user types
-            e.target.setCustomValidity('');
-        });
-
-        // Handle paste: remove invalid chars from pasted text
-        emailInput.addEventListener('paste', (e) => {
-            e.preventDefault();
-            const paste = (e.clipboardData || window.clipboardData).getData('text');
-            const cleaned = paste.replace(/[^A-Za-z0-9@.]/g, '');
-            // Insert cleaned text at cursor position
-            const start = emailInput.selectionStart;
-            const end = emailInput.selectionEnd;
-            const value = emailInput.value;
-            emailInput.value = value.slice(0, start) + cleaned + value.slice(end);
-            const newPos = start + cleaned.length;
-            emailInput.setSelectionRange(newPos, newPos);
-        });
+    if (heroSubtitle) {
+        heroSubtitle.style.animation = 'slideInRight 0.8s ease-out 0.4s both';
+    }
+    if (heroDescription) {
+        heroDescription.style.animation = 'fadeIn 0.8s ease-out 0.5s both';
+    }
+    if (heroButtons) {
+        heroButtons.style.animation = 'scaleUp 0.8s ease-out 0.6s both';
     }
 });
+
+// ============ MOBILE MENU (Future Enhancement) ============
+const handleMobileMenu = () => {
+    const navMenu = document.querySelector('.nav-menu');
+    if (window.innerWidth <= 768) {
+        // Mobile menu logic can be added here
+    }
+};
+
+window.addEventListener('resize', handleMobileMenu);
+
+// ============ PARALLAX EFFECT ============
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const heroElement = document.querySelector('.hero::before');
+    if (heroElement) {
+        // Subtle parallax effect
+    }
+});
+
+// ============ CONSOLE GREETING ============
+console.log('%c Welcome to Ajvad\'s Portfolio! ', 'background: #667eea; color: white; padding: 10px; border-radius: 5px; font-weight: bold; font-size: 14px;');
+console.log('%c Feel free to check out the code and reach out for collaborations! ', 'color: #667eea; font-size: 12px;');
+console.log('%c LinkedIn: https://linkedin.com/in/ajvadc ', 'color: #764ba2; font-size: 12px;');
+
+// ============ INTERSECTION OBSERVER FOR ELEMENTS ============
+const elementObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            elementObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+document.querySelectorAll('.project-card, .skill-category, .cert-card').forEach(el => {
+    elementObserver.observe(el);
+});
+
+// ============ SKELETON LOADING ============
+function hideSkeletonLoaders() {
+    // Hide all skeleton loaders and show content
+    ['hero', 'projects', 'skills', 'certifications'].forEach(section => {
+        const skeleton = document.getElementById(`${section}-skeleton`);
+        const content = document.getElementById(`${section}-content`);
+        
+        if (skeleton) {
+            skeleton.classList.add('hidden');
+            setTimeout(() => {
+                skeleton.style.display = 'none';
+            }, 300);
+        }
+        
+        if (content) {
+            content.classList.add('visible');
+        }
+    });
+}
+
+// Load skeleton for 1.5 seconds, then show content
+window.addEventListener('load', () => {
+    // Small delay to show skeleton effect
+    setTimeout(hideSkeletonLoaders, 1500);
+});
+
+// Also hide on DOMContentLoaded if already loaded
+document.addEventListener('DOMContentLoaded', () => {
+    // If content is already loaded, hide skeleton immediately
+    if (document.readyState === 'complete') {
+        hideSkeletonLoaders();
+    }
+});
+
+// ============ CAROUSEL FUNCTIONALITY ============
+const carouselState = {
+    projects: 0,
+    skills: 0,
+    certifications: 0
+};
+
+function initializeCarousels() {
+    ['projects', 'skills', 'certifications'].forEach(type => {
+        const carousel = document.getElementById(`${type}-carousel`);
+        const indicatorsContainer = document.getElementById(`${type}-indicators`);
+        
+        if (carousel) {
+            const items = carousel.children.length;
+            
+            // Create indicators
+            for (let i = 0; i < items; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('carousel-dot');
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(type, i));
+                indicatorsContainer.appendChild(dot);
+            }
+        }
+    });
+}
+
+function slideCarousel(type, direction) {
+    const carousel = document.getElementById(`${type}-carousel`);
+    const items = carousel.children.length;
+    
+    carouselState[type] += direction;
+    
+    // Loop around
+    if (carouselState[type] >= items) {
+        carouselState[type] = 0;
+    } else if (carouselState[type] < 0) {
+        carouselState[type] = items - 1;
+    }
+    
+    updateCarousel(type);
+}
+
+function goToSlide(type, index) {
+    carouselState[type] = index;
+    updateCarousel(type);
+}
+
+function updateCarousel(type) {
+    const carousel = document.getElementById(`${type}-carousel`);
+    const offset = -carouselState[type] * 100;
+    carousel.style.transform = `translateX(${offset}%)`;
+    
+    // Update indicators
+    document.querySelectorAll(`#${type}-indicators .carousel-dot`).forEach((dot, index) => {
+        dot.classList.remove('active');
+        if (index === carouselState[type]) {
+            dot.classList.add('active');
+        }
+    });
+}
+
+// Initialize carousels when page loads
+document.addEventListener('DOMContentLoaded', initializeCarousels);
+
+// ============ SHOW MORE CERTIFICATIONS (REMOVED - Now using Carousel) ============
