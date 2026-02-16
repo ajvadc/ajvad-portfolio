@@ -269,76 +269,29 @@
         <div class="container">
             <h2 class="section-title">Technical Skills</h2>
             
-            <!-- Skeleton Loader -->
-            <div class="skeleton-loader" id="skills-skeleton">
-                <div class="carousel-wrapper">
-                    <button class="carousel-btn carousel-prev" disabled><i class="fas fa-chevron-left"></i></button>
-                    <div class="carousel-container">
-                        <div style="padding: 30px; border-radius: 16px;">
-                            <div class="skeleton skeleton-card-header" style="margin-bottom: 20px;"></div>
-                            <div class="skeleton skeleton-card-text"></div>
-                            <div class="skeleton skeleton-card-text"></div>
-                            <div class="skeleton skeleton-card-text" style="width: 70%;"></div>
-                        </div>
-                    </div>
-                    <button class="carousel-btn carousel-next" disabled><i class="fas fa-chevron-right"></i></button>
-                </div>
-            </div>
             
-            <!-- Actual Content -->
-            <div class="skeleton-content" id="skills-content">
-                <div class="carousel-wrapper">
-                    <button class="carousel-btn carousel-prev" onclick="slideCarousel('skills', -1)"><i class="fas fa-chevron-left"></i></button>
-                    <div class="carousel-container">
-                        <div class="skills-carousel" id="skills-carousel">
-                            <div class="skill-category">
-                                <h3>Frontend Development</h3>
-                                <div class="skills-list">
-                                    <span class="skill-item">React.js</span>
-                                    <span class="skill-item">JavaScript</span>
-                                    <span class="skill-item">HTML5</span>
-                                    <span class="skill-item">CSS3</span>
-                                    <span class="skill-item">Bootstrap</span>
-                                </div>
-                            </div>
-
-                            <div class="skill-category">
-                                <h3>Backend Development</h3>
-                                <div class="skills-list">
-                                    <span class="skill-item">Node.js</span>
-                                    <span class="skill-item">Express.js</span>
-                                    <span class="skill-item">MongoDB</span>
-                                    <span class="skill-item">RESTful APIs</span>
-                                </div>
-                            </div>
-
-                            <div class="skill-category">
-                                <h3>Cybersecurity</h3>
-                                <div class="skills-list">
-                                    <span class="skill-item">Vulnerability Assessment</span>
-                                    <span class="skill-item">Network Security</span>
-                                    <span class="skill-item">Ethical Hacking</span>
-                                    <span class="skill-item">Digital Forensics</span>
-                                    <span class="skill-item">Anomaly Detection</span>
-                                </div>
-                            </div>
-
-                            <div class="skill-category">
-                                <h3>Other Technologies</h3>
-                                <div class="skills-list">
-                                    <span class="skill-item">Python</span>
-                                    <span class="skill-item">Java</span>
-                                    <span class="skill-item">C/C++</span>
-                                    <span class="skill-item">Git & GitHub</span>
-                                    <span class="skill-item">Android Development</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-btn carousel-next" onclick="slideCarousel('skills', 1)"><i class="fas fa-chevron-right"></i></button>
+            <div class="professional-skills-grid">
+                <div class="prof-skill-card">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Frontend Development</h3>
+                    <p>React.js, JavaScript, HTML5, CSS3, Bootstrap</p>
+                </div>
+                <div class="prof-skill-card">
+                    <div class="skill-icon"><i class="fas fa-server"></i></div>
+                    <h3>Backend Development</h3>
+                    <p>Node.js, Express.js, MongoDB, RESTful APIs</p>
+                </div>
+                <div class="prof-skill-card">
+                    <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Cybersecurity</h3>
+                    <p>Vulnerability Assessment, Network Security, Ethical Hacking, Digital Forensics, Anomaly Detection</p>
+                </div>
+                <div class="prof-skill-card">
+                    <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Other Technologies</h3>
+                    <p>Python, Java, C/C++, Git &amp; GitHub, Android Development</p>
                 </div>
             </div>
-            <div class="carousel-indicators" id="skills-indicators"></div>
             </div>
         </div>
     </section>
@@ -412,117 +365,69 @@
         <div class="container">
             <h2 class="section-title">Certifications & Achievements</h2>
             
-            <!-- Skeleton Loader -->
-            <div class="skeleton-loader" id="certifications-skeleton">
-                <div class="carousel-wrapper">
-                    <button class="carousel-btn carousel-prev" disabled><i class="fas fa-chevron-left"></i></button>
-                    <div class="carousel-container">
-                        <div style="padding: 30px; border-radius: 16px;">
-                            <div class="skeleton skeleton-card-header" style="margin-bottom: 15px;"></div>
-                            <div class="skeleton skeleton-card-text"></div>
-                            <div class="skeleton skeleton-card-text"></div>
-                            <div class="skeleton skeleton-card-text" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                    <button class="carousel-btn carousel-next" disabled><i class="fas fa-chevron-right"></i></button>
-                </div>
-            </div>
             
-            <!-- Actual Content -->
-            <div class="skeleton-content" id="certifications-content">
-                <div class="carousel-wrapper">
-                    <button class="carousel-btn carousel-prev" onclick="slideCarousel('certifications', -1)"><i class="fas fa-chevron-left"></i></button>
-                    <div class="carousel-container">
-                    <div class="certifications-carousel" id="certifications-carousel">
-                        <div class="cert-card">
-                            <h3><a href="https://drive.google.com/file/d/1yDNQgtaggdiV7IiZ1a9lB8RWsFyQHchZ/view?usp=sharing" target="_blank" rel="noopener noreferrer">MERNify Workshop Certificate</a></h3>
-                            <p class="cert-issuer">ACM - Student Chapter, KARE</p>
-                            <p class="cert-date">Nov 2025</p>
-                            <p class="cert-description">Completed an intensive 5-day workshop on MERN stack development, mastering MongoDB, Express.js, React, and Node.js for full-stack web application development.</p>
-                        </div>
-                        <div class="cert-card">
-                            <h3><a href="https://drive.google.com/file/d/1v_E8mNvZ7vURCalUUcReTCDWpq4pPfyy/view?usp=sharing" target="_blank" rel="noopener noreferrer">Certificate of Appreciation - Cyber Security (2 Hours Workshop)</a></h3>
-                            <p class="cert-issuer">TheTechUnique Academy</p>
-                            <p class="cert-date">May 2025</p>
-                            <p class="cert-description">Recognized for excellence in a 2-hour cybersecurity workshop, demonstrating proficiency in ethical hacking, network security, and vulnerability assessment fundamentals.</p>
-                        </div>
-                        <div class="cert-card">
-                            <h3>Introduction to Generative AI</h3>
-                            <p class="cert-issuer">Microsoft & Google Cloud</p>
-                            <p class="cert-date">Recent</p>
-                            <p class="cert-description">Mastering Generative AI, LLMs, and Prompt Engineering</p>
-                        </div>
-
-                        <div class="cert-card">
-                            <h3><a href="https://www.life-global.org/certificate/ceb1f08a-be22-4e7c-b31e-2d328f89e4e6" target="_blank" rel="noopener noreferrer">HP Certified - Introduction to Cybersecurity Awareness</a></h3>
-                            <p class="cert-issuer">HP LIFE</p>
-                            <p class="cert-date">2025</p>
-                            <p class="cert-description">Certified in cybersecurity awareness fundamentals, covering essential concepts in digital security, threat identification, and protective measures.</p>
-                        </div>
-
-                        <div class="cert-card">
-                            <h3><a href="https://www.life-global.org/certificate/50536c48-6a6e-49e5-b8bc-9fe30514bde4" target="_blank" rel="noopener noreferrer">HP Certified Business Communications</a></h3>
-                            <p class="cert-issuer">HP LIFE</p>
-                            <p class="cert-date">2025</p>
-                            <p class="cert-description">Certified in professional business communication skills, including effective presentation, email etiquette, and interpersonal communication in corporate environments.</p>
-                        </div>
-
-                        <div class="cert-card">
-                            <h3><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_xoGuE8bwXWY2WPn2s_1745152993365_completion_certificate.pdf" target="_blank" rel="noopener noreferrer">AWS APAC - Solutions Architecture Job Simulation</a></h3>
-                            <p class="cert-issuer">Forage</p>
-                            <p class="cert-date">2025</p>
-                            <p class="cert-description">Simulated real-world AWS solutions architecture scenarios, gaining hands-on experience in designing scalable, secure cloud infrastructure solutions.</p>
-                        </div>
-
-                        <div class="cert-card">
-                            <h3><a href="https://drive.google.com/file/d/14OsMfHYSZ0QAH7z90qIx61r98v6EltuU/view?usp=sharing" target="_blank" rel="noopener noreferrer">Career Essentials in Data Analysis by Microsoft and LinkedIn</a></h3>
-                            <p class="cert-issuer">Microsoft</p>
-                            <p class="cert-date">2025</p>
-                            <p class="cert-description">Mastered essential data analysis skills through Microsoft's comprehensive program, including data interpretation, visualization, and analytical thinking.</p>
-                        </div>
-
-                        <div class="cert-card">
-                            <h3><a href="https://drive.google.com/file/d/14OsMfHYSZ0QAH7z90qIx61r98v6EltuU/view" target="_blank" rel="noopener noreferrer">Deloitte Australia - Cyber Job Simulation</a></h3>
-                            <p class="cert-issuer">Forage</p>
-                            <p class="cert-date">2025</p>
-                            <p class="cert-description">Participated in Deloitte's cyber job simulation, achieving a 95% score and demonstrating advanced cybersecurity skills in threat analysis and incident response.</p>
-                        </div>
-
-                        <div class="cert-card">
-                            <h3><a href="https://www.linkedin.com/learning/certificates/2116ed2e828227712ffdd57b49e05e525311503c160b1f4eef8e99c8e438fca3" target="_blank" rel="noopener noreferrer">Introduction to Artificial Intelligence</a></h3>
-                            <p class="cert-issuer">LinkedIn</p>
-                            <p class="cert-date">2025</p>
-                            <p class="cert-description">Gained foundational knowledge in artificial intelligence concepts, including machine learning algorithms, neural networks, and AI applications in various industries.</p>
-                        </div>
-
-                        <div class="cert-card">
-                            <h3><a href="https://www.linkedin.com/learning/certificates/5bd84afe4b9aeb452aa1e60ddcf68f51430b877dc83aae101105375840a20a61?trk=share_certificate" target="_blank" rel="noopener noreferrer">Introduction to Career Skills in Data Analytics</a></h3>
-                            <p class="cert-issuer">LinkedIn</p>
-                            <p class="cert-date">2025</p>
-                            <p class="cert-description">Developed essential career skills in data analytics, covering data interpretation, statistical analysis, and professional communication of insights.</p>
-                        </div>
-
-                        <div class="cert-card">
-                            <h3><a href="https://drive.google.com/file/d/1CpDBBgW71h5e4QujochBWH0xs-iC6TmL/view?usp=sharing" target="_blank" rel="noopener noreferrer">YOUTEX Future Leaders 2023 – Certificate of Appreciation</a></h3>
-                            <p class="cert-issuer">Youtex</p>
-                            <p class="cert-date">2023</p>
-                            <p class="cert-description">Recognized as a future leader in technology, demonstrating potential in innovation, leadership, and contribution to the tech community.</p>
-                        </div>
-
-                        <div class="cert-card">
-                            <h3><a href="https://www.linkedin.com/learning/certificates/d8022c7323163c75b281a2826da61c0fee2a3282c58d4e24fda6328649d1b6ed?trk=share_certificate" target="_blank" rel="noopener noreferrer">Learning Data Analytics Part 2: Extending and Applying Core Knowledge</a></h3>
-                            <p class="cert-issuer">LinkedIn</p>
-                            <p class="cert-date">2025</p>
-                            <p class="cert-description">Advanced data analytics skills, focusing on complex data manipulation, advanced visualization, predictive modeling, and real-world application of analytical techniques.</p>
-                        </div>
-                    </div>
+            <div class="professional-skills-grid">
+                <div class="prof-skill-card">
+                    <div class="skill-icon"><i class="fas fa-certificate"></i></div>
+                    <h3><a href="https://drive.google.com/file/d/1yDNQgtaggdiV7IiZ1a9lB8RWsFyQHchZ/view?usp=sharing" target="_blank" rel="noopener noreferrer">MERNify Workshop Certificate</a></h3>
+                    <p>ACM - Student Chapter, KARE (Nov 2025)</p>
                 </div>
-                <button class="carousel-btn carousel-next" onclick="slideCarousel('certifications', 1)"><i class="fas fa-chevron-right"></i></button>
+                <div class="prof-skill-card">
+                    <div class="skill-icon"><i class="fas fa-certificate"></i></div>
+                    <h3><a href="https://drive.google.com/file/d/1v_E8mNvZ7vURCalUUcReTCDWpq4pPfyy/view?usp=sharing" target="_blank" rel="noopener noreferrer">Certificate of Appreciation - Cyber Security (2 Hours Workshop)</a></h3>
+                    <p>TheTechUnique Academy (May 2025)</p>
+                </div>
+                <div class="prof-skill-card">
+                    <div class="skill-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>Introduction to Generative AI</h3>
+                    <p>Microsoft &amp; Google Cloud (Recent)</p>
+                </div>
+                <div class="prof-skill-card">
+                    <div class="skill-icon"><i class="fas fa-certificate"></i></div>
+                    <h3><a href="https://www.life-global.org/certificate/ceb1f08a-be22-4e7c-b31e-2d328f89e4e6" target="_blank" rel="noopener noreferrer">HP Certified - Introduction to Cybersecurity Awareness</a></h3>
+                    <p>HP LIFE (2025)</p>
+                </div>
+                <div class="prof-skill-card">
+                    <div class="skill-icon"><i class="fas fa-certificate"></i></div>
+                    <h3><a href="https://www.life-global.org/certificate/50536c48-6a6e-49e5-b8bc-9fe30514bde4" target="_blank" rel="noopener noreferrer">HP Certified Business Communications</a></h3>
+                    <p>HP LIFE (2025)</p>
+                </div>
+                <div class="prof-skill-card">
+                    <div class="skill-icon"><i class="fas fa-certificate"></i></div>
+                    <h3><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_xoGuE8bwXWY2WPn2s_1745152993365_completion_certificate.pdf" target="_blank" rel="noopener noreferrer">AWS APAC - Solutions Architecture Job Simulation</a></h3>
+                    <p>Forage (2025)</p>
+                </div>
+                <div class="prof-skill-card">
+                    <div class="skill-icon"><i class="fas fa-certificate"></i></div>
+                    <h3><a href="https://drive.google.com/file/d/14OsMfHYSZ0QAH7z90qIx61r98v6EltuU/view?usp=sharing" target="_blank" rel="noopener noreferrer">Career Essentials in Data Analysis by Microsoft and LinkedIn</a></h3>
+                    <p>Microsoft (2025)</p>
+                </div>
+                <div class="prof-skill-card">
+                    <div class="skill-icon"><i class="fas fa-certificate"></i></div>
+                    <h3><a href="https://drive.google.com/file/d/14OsMfHYSZ0QAH7z90qIx61r98v6EltuU/view" target="_blank" rel="noopener noreferrer">Deloitte Australia - Cyber Job Simulation</a></h3>
+                    <p>Forage (2025)</p>
+                </div>
+                <div class="prof-skill-card">
+                    <div class="skill-icon"><i class="fas fa-certificate"></i></div>
+                    <h3><a href="https://www.linkedin.com/learning/certificates/2116ed2e828227712ffdd57b49e05e525311503c160b1f4eef8e99c8e438fca3" target="_blank" rel="noopener noreferrer">Introduction to Artificial Intelligence</a></h3>
+                    <p>LinkedIn (2025)</p>
+                </div>
+                <div class="prof-skill-card">
+                    <div class="skill-icon"><i class="fas fa-certificate"></i></div>
+                    <h3><a href="https://www.linkedin.com/learning/certificates/5bd84afe4b9aeb452aa1e60ddcf68f51430b877dc83aae101105375840a20a61?trk=share_certificate" target="_blank" rel="noopener noreferrer">Introduction to Career Skills in Data Analytics</a></h3>
+                    <p>LinkedIn (2025)</p>
+                </div>
+                <div class="prof-skill-card">
+                    <div class="skill-icon"><i class="fas fa-certificate"></i></div>
+                    <h3><a href="https://drive.google.com/file/d/1CpDBBgW71h5e4QujochBWH0xs-iC6TmL/view?usp=sharing" target="_blank" rel="noopener noreferrer">YOUTEX Future Leaders 2023 – Certificate of Appreciation</a></h3>
+                    <p>Youtex (2023)</p>
+                </div>
+                <div class="prof-skill-card">
+                    <div class="skill-icon"><i class="fas fa-certificate"></i></div>
+                    <h3><a href="https://www.linkedin.com/learning/certificates/d8022c7323163c75b281a2826da61c0fee2a3282c58d4e24fda6328649d1b6ed?trk=share_certificate" target="_blank" rel="noopener noreferrer">Learning Data Analytics Part 2: Extending and Applying Core Knowledge</a></h3>
+                    <p>LinkedIn (2025)</p>
+                </div>
             </div>
-            <div class="carousel-indicators" id="certifications-indicators"></div>
-            </div>
-        </div>
-    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
