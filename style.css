@@ -894,8 +894,7 @@ section:target {
 }
 
 .project-card {
-    background: rgba(30, 41, 59, 0.6);
-    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: #ffffff;
     padding: 30px;
     border-radius: 16px;
@@ -903,8 +902,8 @@ section:target {
     transition: var(--transition);
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(99, 102, 241, 0.2);
-    box-shadow: 0 8px 32px rgba(99, 102, 241, 0.1);
+    border: none;
+    box-shadow: var(--shadow-lg);
     position: relative;
     overflow: hidden;
 }
@@ -923,9 +922,8 @@ section:target {
 }
 
 .project-card:hover {
-    transform: translateY(-15px) scale(1.02);
-    box-shadow: 0 20px 50px rgba(99, 102, 241, 0.2);
-    border-color: rgba(99, 102, 241, 0.5);
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
 }
 
 .project-header {
@@ -1060,12 +1058,13 @@ section:target {
     animation: scaleUp 0.8s ease-out;
     transition: var(--transition);
     padding: 30px;
-    background: rgba(30, 41, 59, 0.5);
-    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 16px;
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    border: none;
     position: relative;
     overflow: hidden;
+    color: white;
+    box-shadow: var(--shadow-lg);
 }
 
 .skill-category::before {
@@ -1082,9 +1081,8 @@ section:target {
 }
 
 .skill-category:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.15);
-    border-color: rgba(99, 102, 241, 0.4);
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
 }
 
 .skill-category h3 {
@@ -1095,7 +1093,7 @@ section:target {
     z-index: 2;
     margin-bottom: 25px;
     padding-bottom: 15px;
-    border-bottom: 2px solid rgba(99, 102, 241, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .skills-list {
@@ -1132,17 +1130,17 @@ section:target {
 }
 
 .cert-card {
-    background: rgba(30, 41, 59, 0.6);
-    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     padding: 40px;
     border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(99, 102, 241, 0.1);
+    box-shadow: var(--shadow-lg);
     animation: slideInRight 0.8s ease-out;
     transition: var(--transition);
     text-align: center;
     position: relative;
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    border: none;
     overflow: hidden;
+    color: white;
 }
 
 .cert-card::before {
@@ -1172,9 +1170,8 @@ section:target {
 }
 
 .cert-card:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 20px 50px rgba(99, 102, 241, 0.2);
-    border-color: rgba(99, 102, 241, 0.4);
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
 }
 
 .cert-card h3 {
