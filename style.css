@@ -1296,6 +1296,9 @@ section:target {
     font-weight: 700;
     position: relative;
     z-index: 2;
+    /* ensure long titles wrap nicely */
+    word-break: break-word;
+    white-space: normal;
 }
 
 .cert-issuer {
@@ -1784,6 +1787,13 @@ section:target {
     .logo {
         font-size: 18px;
     }
+    /* adjust card padding for tiny screens */
+    .cert-card {
+        padding: 20px;
+    }
+    .cert-card h3 {
+        font-size: 16px;
+    }
 
     .hero-title {
         font-size: 26px;
@@ -1830,6 +1840,7 @@ section:target {
 .certifications-carousel .cert-card {
     flex: 0 0 100%;
     min-width: 100%;
+    /* reduce padding on small screens later via media query */
 }
 
 .carousel-btn {
