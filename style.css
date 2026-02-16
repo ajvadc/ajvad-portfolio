@@ -725,23 +725,56 @@ section:target {
 
 /* ============ EDUCATION SECTION ============ */
 .education {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: #0a0e27;
+    position: relative;
+    overflow: hidden;
+}
+
+.education::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 8s ease-in-out infinite;
+}
+
+.education .container {
+    position: relative;
+    z-index: 2;
+}
+
+.education .section-title {
+    color: #ffffff;
+}
+
+.education .section-title::after {
+    background: var(--gradient-1);
 }
 
 .education-timeline {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    position: relative;
+    z-index: 2;
 }
 
 .education-card {
-    background: white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
     padding: 30px;
     border-radius: 12px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-lg);
     animation: scaleUp 0.8s ease-out;
     transition: var(--transition);
-    border-left: 4px solid var(--primary-color);
+    border-left: 4px solid #ec4899;
+    position: relative;
+    overflow: hidden;
 }
 
 .education-card:hover {
@@ -751,7 +784,7 @@ section:target {
 
 .education-card h3 {
     font-size: 20px;
-    color: var(--text-dark);
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
@@ -764,39 +797,39 @@ section:target {
 
 .edu-header h3 {
     font-size: 22px;
-    color: var(--primary-color);
+    color: #ffffff;
     font-weight: 600;
 }
 
 .edu-period {
-    color: #666;
+    color: rgba(255, 255, 255, 0.85);
     font-size: 13px;
     margin-bottom: 15px;
     font-weight: 500;
 }
 
 .edu-institution {
-    color: #333;
+    color: #ffffff;
     font-weight: 600;
     font-size: 16px;
     margin-bottom: 5px;
 }
 
 .edu-location {
-    color: #666;
+    color: rgba(255, 255, 255, 0.8);
     font-size: 14px;
     margin-bottom: 10px;
 }
 
 .edu-specialization {
-    color: var(--secondary-color);
+    color: #fbbf24;
     font-weight: 600;
     font-size: 15px;
     margin-bottom: 15px;
 }
 
 .edu-description {
-    color: #555;
+    color: rgba(255, 255, 255, 0.9);
     font-size: 14px;
     line-height: 1.7;
     margin-bottom: 0;
