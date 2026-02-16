@@ -1118,6 +1118,114 @@ section:target {
     box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
 }
 
+/* ============ PROFESSIONAL SKILLS SECTION ============ */
+.professional-skills {
+    background: #0a0e27;
+    position: relative;
+    overflow: hidden;
+}
+
+.professional-skills::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 8s ease-in-out infinite;
+}
+
+.professional-skills .container {
+    position: relative;
+    z-index: 2;
+}
+
+.professional-skills .section-title {
+    color: #ffffff;
+}
+
+.professional-skills .section-title::after {
+    background: var(--gradient-1);
+}
+
+.professional-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.prof-skill-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 40px 30px;
+    border-radius: 16px;
+    text-align: center;
+    animation: scaleUp 0.8s ease-out;
+    transition: var(--transition);
+    color: white;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.prof-skill-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 7s ease-in-out infinite;
+}
+
+.prof-skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.skill-icon {
+    font-size: 48px;
+    color: #fbbf24;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.prof-skill-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+.prof-skill-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    z-index: 1;
+    margin: 0;
+}
+
 /* ============ CERTIFICATIONS SECTION ============ */
 .certifications {
     background: #0a0e27;
